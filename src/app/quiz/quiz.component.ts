@@ -79,7 +79,7 @@ export class QuizComponent implements OnInit {
   };
 
   isCorrect(question: Question) {
-    return question.options.every(x => x.selected === x.isAnswer) ? 'correct' : 'wrong';
+    return question.options.every(x => x.selected === x.isAnswer) ? 'goed' : 'fout';
   };
 
   onSubmit() {
