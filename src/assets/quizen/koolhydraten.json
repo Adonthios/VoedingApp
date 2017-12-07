@@ -1,0 +1,37 @@
+{
+    "id": 2,
+    "name": "Schijf van Vijf quiz",
+    "description": "Deze quiz gaat over de schijf van vijf van het voedingscentrum",
+    "questions": [
+        {
+            "id": 1,
+            "name": "Van welk bedrijf komt de schijf van vijf?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  1,
+                    "name": "Een bedrijf",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  1,
+                    "name": "Voedingscentrum",
+                    "isAnswer": true
+                },
+                {
+                    "id": 3,
+                    "questionId":  1,
+                    "name": "Geen van bovenstaande",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}
