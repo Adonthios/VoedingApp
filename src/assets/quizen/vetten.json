@@ -1,23 +1,23 @@
 {
     "id": 3,
-    "name": "Schijf van Vijf quiz",
-    "description": "Deze quiz gaat over de schijf van vijf van het voedingscentrum",
+    "name": "Vetten quiz",
+    "description": "Deze quiz gaat over Vetten",
     "questions": [
         {
             "id": 1,
-            "name": "Van welk bedrijf komt de schijf van vijf?",
+            "name": "Zijn vetten slecht?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId":  1,
-                    "name": "Een bedrijf",
+                    "name": "Ja",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
                     "questionId":  1,
-                    "name": "Voedingscentrum",
+                    "name": "Nee",
                     "isAnswer": true
                 },
                 {
