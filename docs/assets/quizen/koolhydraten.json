@@ -1,0 +1,37 @@
+{
+    "id": 2,
+    "name": "Koolhydraten quiz",
+    "description": "Deze quiz gaat over Koolhydraten",
+    "questions": [
+        {
+            "id": 1,
+            "name": "Zijn koolhydraten slecht?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  1,
+                    "name": "Ja",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  1,
+                    "name": "Nee",
+                    "isAnswer": true
+                },
+                {
+                    "id": 3,
+                    "questionId":  1,
+                    "name": "Geen van bovenstaande",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}
