@@ -1,0 +1,60 @@
+{
+    "id": 1,
+    "name": "Schijf van Vijf quiz",
+    "description": "Deze quiz gaat over de schijf van vijf van het voedingscentrum",
+    "questions": [
+        {
+            "id": 1,
+            "name": "Van welke organisatie komt de schijf van vijf?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  1,
+                    "name": "De gezondheidsraad",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  1,
+                    "name": "Voedingscentrum",
+                    "isAnswer": true
+                },
+                {
+                    "id": 3,
+                    "questionId":  1,
+                    "name": "Geen van bovenstaande",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }, {
+            "id": 2,
+            "name": "Valt een Marsreep binnen de schijf van vijf?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 2,
+                    "name": "Ja",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 2,
+                    "name": "Nee",
+                    "isAnswer": true
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}
