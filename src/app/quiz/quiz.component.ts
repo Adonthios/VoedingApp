@@ -15,6 +15,7 @@ export class QuizComponent implements OnInit {
   quiz: Quiz = new Quiz(null);
   mode = 'quiz';
   quizName: string;
+  currentAnswer: string;
   config: QuizConfig = {
     'allowBack': true,
     'allowReview': true,
@@ -62,15 +63,19 @@ export class QuizComponent implements OnInit {
       question.options.forEach((x) => { if (x.id !== option.id) x.selected = false; });
     }
 
-    if (this.config.autoMove) {
-      this.goTo(this.pager.index + 1);
-    }
+    this.currentAnswer = this.isCorrect(question);
+
+    // if (this.config.autoMove) {
+    //   this.goTo(this.pager.index + 1);
+    // }
   }
 
   goTo(index: number) {
     if (index >= 0 && index < this.pager.count) {
       this.pager.index = index;
       this.mode = 'quiz';
+
+      this.currentAnswer = "";
     }
   }
 
@@ -79,7 +84,7 @@ export class QuizComponent implements OnInit {
   };
 
   isCorrect(question: Question) {
-    return question.options.every(x => x.selected === x.isAnswer) ? 'goed' : 'fout';
+    return question.options.every(x => x.selected === x.isAnswer) ? 'Goed' : 'Fout';
   };
 
   onSubmit() {
@@ -88,6 +93,7 @@ export class QuizComponent implements OnInit {
 
     // Post your data to the server here. answers contains the questionId and the users' answer.
     console.log(this.quiz.questions);
+
     this.mode = 'result';
   }
 }

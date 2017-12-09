@@ -2,23 +2,31 @@
   <div class="col-md-6">
     <h3>Quizes over eten</h3>
   </div>
+
   <div class="col-md-6 text-sm-right">
-    Selecteer Quiz:
+    Selecteer quiz
     <select [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
         <option *ngFor="let quiz of quizes" [value]="quiz.id">{{quiz.name}}</option>
       </select>
   </div>
 </div>
+
 <div id="quiz">
   <h1 class="text-sm-center">{{quiz.name}}</h1>
   <hr />
 
   <div *ngIf="mode=='quiz' && quiz">
     <div *ngFor="let question of filteredQuestions;">
-      <div class="badge badge-info">Vraag {{pager.index + 1}} van de {{pager.count}}.</div>
-      <h2>{{pager.index + 1}}. <span [innerHTML]="question.name"></span></h2>
+      <div class="badge badge-info">Vraag {{pager.index + 1}}/{{pager.count}}.</div>
+      <h2><span [innerHTML]="question.name"></span></h2>
       <div class="row text-left options">
         <div class="col-md-6" *ngFor="let option of question.options">
+          <!-- <div class="option">
+            <label class="" [attr.for]="option.id">
+                <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+                {{option.name}}
+            </label>
+          </div> -->
           <div class="option">
             <label class="" [attr.for]="option.id">
                 <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
@@ -27,23 +35,34 @@
           </div>
         </div>
       </div>
-    </div>
-    <hr />
-    <div class="text-sm-center">
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">Eerste vraag</button>
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.index - 1);">Vorige</button>
-      <button class="btn btn-primary" (click)="goTo(pager.index + 1);">Volgende</button>
-      <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Laatste vraag</button>
-      <!--<pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>-->
-    </div>
-  </div>
 
-  <div class="row review" *ngIf="mode=='review'">
+      <div *ngIf="currentAnswer" class="col-md-6">
+        {{currentAnswer}}
+
+        <hr />
+
+        <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
+        <button class="btn btn-default" *ngIf="pager.index + 1 == pager.count" (click)="mode = 'result'; onSubmit();">Quiz afronden</button>
+      </div>
+    </div>
+
+    <!-- <div class="text-sm-center"> -->
+      <!-- <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(0);">Eerste vraag</button> -->
+      <!-- <button class="btn btn-default" *ngIf="config.allowBack && pager.index + 1 > 1" (click)="goTo(pager.index - 1);">Vorige</button>
+      <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button> -->
+      <!-- <button class="btn btn-default" *ngIf="config.allowBack" (click)="goTo(pager.count - 1);">Laatste vraag</button> -->
+      <!--<pagination *ngIf="config.showPager" direction-links="false" total-items="totalItems" items-per-page="itemsPerPage" ng-model="currentPage" ng-change="pageChanged()"></pagination>-->
+    <!-- </div>
+  </div> -->
+
+<!-- Misschien terug laten komen, dit is het overzicht :P -->
+  <!-- <div class="row review" *ngIf="mode=='review'">
     <div class="col-sm-4" *ngFor="let question of quiz.questions; let index = index;">
       <div (click)="goTo(index)" class="{{ isAnswered(question) == 'Answered'? 'answered': 'not-answered' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
     </div>
-  </div>
-  <div class="result" *ngIf="mode=='result'">
+  </div> -->
+
+  <div class="result" *ngIf="mode == 'result'">
     <h2>Quiz resultaat</h2>
     <div *ngFor="let question of quiz.questions; let index = index">
       <div class="result-question">
@@ -59,9 +78,10 @@
     <h4 class="alert alert-info text-sm-center">Bedankt voor het invullen!</h4>
   </div>
   <hr />
-  <div *ngIf="mode!='result'">
-    <button class="btn btn-default" (click)="mode = 'quiz'">Quiz</button>
-    <button class="btn btn-default" (click)="mode = 'review'">Review</button>
-    <button class="btn btn-default" (click)="onSubmit();">Quiz afronden</button>
-  </div>
+
+  <!-- <div *ngIf="mode!='result'"> -->
+    <!-- <button class="btn btn-default" (click)="mode = 'quiz'">Quiz</button>
+    <button class="btn btn-default" (click)="mode = 'review'">Review</button> -->
+    <!-- <button class="btn btn-default" (click)="onSubmit();">Quiz afronden</button>
+  </div> -->
 </div>
