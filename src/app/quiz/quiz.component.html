@@ -37,8 +37,8 @@
       </div>
 
       <div *ngIf="currentAnswer" class="col-md-6">
-        {{currentAnswer}}
-
+        {{currentAnswer}} <br />
+        {{currentDescription}}
         <hr />
 
         <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>

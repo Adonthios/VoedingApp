@@ -3,6 +3,7 @@ export class Option {
     questionId: number;
     name: string;
     isAnswer: boolean;
+    description: string;
     selected: boolean;
 
     constructor(data: any) {
@@ -11,5 +12,6 @@ export class Option {
         this.questionId = data.questionId;
         this.name = data.name;
         this.isAnswer = data.isAnswer;
+        this.description = data.description;
     }
 }

@@ -18,6 +18,7 @@
                     "id": 2,
                     "questionId":  1,
                     "name": "Voedingscentrum",
+                    "description": "Dit is inderdaad waar! Het voedingscentrum geeft advies op basis van de aanbevelingen van de gezondheidsraad.",
                     "isAnswer": true
                 },
                 {

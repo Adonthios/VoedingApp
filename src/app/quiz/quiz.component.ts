@@ -16,6 +16,8 @@ export class QuizComponent implements OnInit {
   mode = 'quiz';
   quizName: string;
   currentAnswer: string;
+  currentDescription: string;
+
   config: QuizConfig = {
     'allowBack': true,
     'allowReview': true,
@@ -64,10 +66,7 @@ export class QuizComponent implements OnInit {
     }
 
     this.currentAnswer = this.isCorrect(question);
-
-    // if (this.config.autoMove) {
-    //   this.goTo(this.pager.index + 1);
-    // }
+    this.currentDescription = option.description;
   }
 
   goTo(index: number) {
