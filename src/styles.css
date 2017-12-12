@@ -33,8 +33,24 @@ background: 0 0;
     color: #E06D08;
 }
 
+.answer.good, .answer-description.good {
+    display: block;
+    background-color:#aaeeaa;
+    font-size:20px;
+    padding:10px;
+    margin:3px;
+}
+.answer.wrong, .answer-description.wrong {
+    display: block;
+    background-color:#EF5350;
+    font-size:20px;
+    padding:10px;
+    margin:3px;
+}
+
 .option{
-    background-color:#E06D08;
+    display: block;
+    background-color:#ff9940;
     font-size:20px;
     padding:10px;
     margin:3px;

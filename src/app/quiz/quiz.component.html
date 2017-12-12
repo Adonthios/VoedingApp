@@ -27,8 +27,8 @@
                 {{option.name}}
             </label>
           </div> -->
-          <div class="option">
-            <label class="" [attr.for]="option.id">
+          <div class="">
+            <label class="option" [attr.for]="option.id">
                 <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
                 {{option.name}}
             </label>
@@ -37,8 +37,8 @@
       </div>
 
       <div *ngIf="currentAnswer" class="col-md-6">
-        {{currentAnswer}} <br />
-        {{currentDescription}}
+        <div class="answer {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentAnswer}}</div>
+        <div class="answer-description {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentDescription}}</div>
         <hr />
 
         <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>

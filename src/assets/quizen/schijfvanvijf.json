@@ -12,6 +12,7 @@
                     "id": 1,
                     "questionId":  1,
                     "name": "De gezondheidsraad",
+                    "description": "De gezondheidsraad geeft wel advies over goede voeding met de Richtlijnen goede voeding. Maar maakt niet de schijf van vijf.",
                     "isAnswer": false
                 },
                 {
