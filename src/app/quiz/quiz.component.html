@@ -38,7 +38,7 @@
 
       <div *ngIf="currentAnswer" class="col-md-6">
         <div class="answer {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentAnswer}}</div>
-        <div class="answer-description {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentDescription}}</div>
+        <div *ngIf="currentDescription" class="answer-description {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentDescription}}</div>
         <hr />
 
         <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
