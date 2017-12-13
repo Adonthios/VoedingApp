@@ -14,9 +14,9 @@ export class QuizService {
 
   getAll() {
     return [
-      { id: 'assets/quizen/schijfvanvijf.json', name: 'Schijf van Vijf' },
-      { id: 'assets/quizen/koolhydraten.json', name: 'Koolhydraten' },
-      { id: 'assets/quizen/vetten.json', name: 'Vetten' }
+      { id: 'assets/quizen/startenmetvoeding.json', name: 'Starten met voeding' },
+      { id: 'assets/quizen/gemiddeldevoeding.json', name: 'Gemiddelde voeding vragen' },
+      { id: 'assets/quizen/moeilijkevoeding.json', name: 'Moeilijke voeding vragen' }
     ];
   }
 }
