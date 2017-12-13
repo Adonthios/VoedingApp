@@ -1,32 +1,26 @@
 {
     "id": 1,
-    "name": "Schijf van Vijf quiz",
-    "description": "Deze quiz gaat over de schijf van vijf van het voedingscentrum",
+    "name": "Starten in de wereld van voeding quiz",
+    "description": "Deze quiz gaat over algemene feiten over voeding",
     "questions": [
         {
             "id": 1,
-            "name": "Van welke organisatie komt de schijf van vijf?",
+            "name": "Zijn koolhydraten altijd slecht voor je?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId":  1,
-                    "name": "De gezondheidsraad",
-                    "description": "De gezondheidsraad geeft wel advies over goede voeding met de Richtlijnen goede voeding. Maar maakt niet de schijf van vijf.",
+                    "name": "Ja",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
                     "questionId":  1,
-                    "name": "Voedingscentrum",
-                    "description": "Dit is inderdaad waar! Het voedingscentrum geeft advies op basis van de aanbevelingen van de gezondheidsraad.",
-                    "isAnswer": true
-                },
-                {
-                    "id": 3,
-                    "questionId":  1,
-                    "name": "Geen van bovenstaande",
-                    "isAnswer": false
+                    "name": "Nee",
+                    "isAnswer": true,
+                    "description": "Dat klopt! Suikers, zetmeel en vezels zijn vormen van koolhydraten in onze voeding. Suikers en zetmeel zijn koolhydraten die een belangrijke bron van energie zijn voor het lichaam. De Gezondheidsraad adviseert dat wie gezond wil eten, 40 tot 70% van zijn energie uit koolhydraten haalt. Koolhydraten kunnen het beste gegeten worden in de vorm van voedingsmiddelen waarvan is aangetoond dat ze gezondheidswinst leveren of andere goede voedingsstoffen bevatten. Goede bronnen zijn vooral volkoren graanproducten zoals volkorenbrood en volkoren pasta, aardappels, peulvruchten, groente en fruit. Koolhydraatrijke producten die arm zijn aan voedingsstoffen, zoals frisdrank, koek en snoep, kunnen beter in beperkte mate worden genomen.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/koolhydraten.aspx"
                 }
             ],
             "questionType": {

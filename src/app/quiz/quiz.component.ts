@@ -17,6 +17,7 @@ export class QuizComponent implements OnInit {
   quizName: string;
   currentAnswer: string;
   currentDescription: string;
+  currentUrl: string;
 
   config: QuizConfig = {
     'allowBack': true,
@@ -67,6 +68,7 @@ export class QuizComponent implements OnInit {
 
     this.currentAnswer = this.isCorrect(question);
     this.currentDescription = option.description;
+    this.currentUrl = option.url;
   }
 
   goTo(index: number) {

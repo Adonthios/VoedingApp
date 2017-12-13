@@ -37,8 +37,9 @@
       </div>
 
       <div *ngIf="currentAnswer" class="col-md-6">
-        <div class="answer {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentAnswer}}</div>
+        <div class="answer {{ currentAnswer == 'Goed'? 'good': 'wrong'}}"> {{ currentAnswer == 'Goed'? 'Goed gedaan!': 'Dit antwoord is helaas fout, probeer het opnieuw'}}</div>
         <div *ngIf="currentDescription" class="answer-description {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">{{currentDescription}}</div>
+        <div *ngIf="currentUrl" class="answer-url {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">Zie <a target="_blank" href="{{currentUrl}}">{{currentUrl}}</a> voor meer informatie.</div>
         <hr />
 
         <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>

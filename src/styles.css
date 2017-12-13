@@ -48,6 +48,14 @@ background: 0 0;
     margin:3px;
 }
 
+.answer-url {
+    display: block;
+    background-color:#fff7be;
+    font-size:20px;
+    padding:10px;
+    margin:3px;
+}
+
 .option{
     display: block;
     background-color:#ff9940;
