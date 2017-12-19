@@ -30,22 +30,22 @@
             }
         }, {
             "id": 2,
-            "name": "Zijn vetten per definitie slecht?",
+            "name": "Bestaan er goede vetten?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId": 2,
                     "name": "Ja",
-                    "isAnswer": false
+                    "isAnswer": true,
+                    "description": "Goed gekozen! Vaak denken mensen dat vetten slecht zijn. Maar vetten leveren energie voor het lichaam en worden dan ook verteerd door het lichaam. Er is echter wel een verschil in vetten. Verzadigd vet vergroot de kans op hart- en vaatziekten. Verzadigd vet kan namelijk het cholesterolgehalte in je bloed laten stijgen en daardoor kunnen je bloedvaten verstopt raken. Kies vooral producten met weinig verzadigd vet en vervang ze door producten met onverzadigd vet. Hoe minder verzadigd vet je eet, hoe beter. Vaak kun je op het etiket van een product zien hoeveel verzadigd vet erin zit. Lees daarom het etiket als je boodschappen doet en vergelijk de hoeveelheid verzadigd vet.",
+                    "url": "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/welke-vetten-zijn-ongezond-.aspx"
                 },
                 {
                     "id": 2,
                     "questionId": 2,
                     "name": "Nee",
-                    "isAnswer": true,
-                    "description": "Goed gekozen! Vaak denken mensen dat vetten slecht zijn. Maar vetten leveren energie voor het lichaam en worden dan ook verteerd door het lichaam. Er is echter wel een verschil in vetten. Verzadigd vet vergroot de kans op hart- en vaatziekten. Verzadigd vet kan namelijk het cholesterolgehalte in je bloed laten stijgen en daardoor kunnen je bloedvaten verstopt raken. Kies vooral producten met weinig verzadigd vet en vervang ze door producten met onverzadigd vet. Hoe minder verzadigd vet je eet, hoe beter. Vaak kun je op het etiket van een product zien hoeveel verzadigd vet erin zit. Lees daarom het etiket als je boodschappen doet en vergelijk de hoeveelheid verzadigd vet.",
-                    "url": "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/welke-vetten-zijn-ongezond-.aspx"
+                    "isAnswer": false
                 }
             ],
             "questionType": {
@@ -53,24 +53,168 @@
                 "name": "Multiple Choice",
                 "isActive": true
             }
-        }, {
+        },
+
+        {
             "id": 3,
-            "name": "Als je ‘s avond na 19:00 eet, wordt je dik",
+            "name": "Als je ‘s avond na 19:00 eet, wordt je dik?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
-                    "questionId": 2,
+                    "questionId": 3,
                     "name": "Waar",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
-                    "questionId": 2,
+                    "questionId": 3,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Het maakt niet uit op welk moment van de dag je eet en drinkt. Je kunt dus ook na 8 uur 's avonds iets eten. Het gaat erom hoeveel calorieën je in totaal op een dag binnenkrijgt door eten en hoeveel calorieën je verbruikt door bijvoorbeeld beweging. Dit noemen we de energiebalans. Wat je meer eet dan je verbrandt, sla je op als vet.",
+                    "description": "Het maakt niet uit op welk moment van de dag je eet en drinkt. Je kunt dus ook na 7 uur 's avonds iets eten. Het gaat erom hoeveel calorieën je in totaal op een dag binnenkrijgt door eten en hoeveel calorieën je verbruikt door bijvoorbeeld beweging. Dit noemen we de energiebalans. Wat je meer eet dan je verbrandt, sla je op als vet.",
                     "url": "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/afvallen-en-gewicht/kom-je-aan-van-eten-na-8-uur.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Extra water drinken naast je normale consumpties helpt om gewicht te verliezen.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 4,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 4,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Veel water drinken en verder hetzelfde blijven eten en drinken, helpt niets. Water is wel een goede keuze om frisdrank en vruchtendranken mee te vervangen. Dat scheelt calorieën en draagt daardoor bij aan afvallen. Ook een glas water nemen in plaats van een calorierijk tussendoortje kan je op een moeilijk moment gebruiken om een verleiding te weerstaan.",
+                    "url": "http://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/afvallen-en-gewicht/gaat-het-afvallen-beter-als-ik-veel-water-drink-.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Het maakt niet uit wat voor soort vet je eet. Vet is vet.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 5,
+                    "name": "Juist",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 5,
+                    "name": "Nee",
+                    "isAnswer": true,
+                    "description": "Er zijn ruwweg twee soorten vet. Verzadigde vetten verhogen het ongunstige cholesterol in je bloed. Daarmee neemt de kans op hart- en vaatziekten toe. Het is beter om producten met verzadigd vet te vervangen voor producten met onverzadigd vet. Neem daarom de zachte soorten vet, zoals halvarine voor op brood en gebruik voor de bereiding van maaltijden olie of vloeibaar bak- en braadvet uit een knijpfles. Daar zitten meer onverzadigde vetten in. Kies daarnaast zo min mogelijk voor vet vlees, volle zuivel, koek, gebak en snacks. Hier zit veel 'verborgen vet' in. Vervang deze producten door producten met veel onverzadigde vetten zoals vette vis, noten en avocado.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 6,
+            "name": "Brood is een dikmaker.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 6,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 6,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Zoals alle voedingsmiddelen levert brood calorieën. En wanneer je over lange tijd meer calorieën binnenkrijgt dan je verbrandt, kom je aan in gewicht. Maar dat heeft niet specifiek iets te maken met brood. Waar de brandstof vandaan komt, uit koolhydraten, vet of eiwit, maakt niet uit.",
+                    "url": "http://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/is-brood-een-dikmaker2.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 7,
+            "name": "Zet de volgende 3 producten op volgorde van het minste suiker naar het meeste suiker.",
+            "questionTypeId": 1,
+            "options": [
+              {
+                "id": 1,
+                "questionId": 7,
+                "name": "Coca-Cola light, Coca-Cola regular, Sinaasappelsap",
+                "isAnswer": false
+              },
+              {
+                "id": 2,
+                "questionId": 7,
+                "name": "Sinaasappelsap, Coca-Cola light, Coca-Cola regular",
+                "isAnswer": false
+              },
+              {
+                  "id": 3,
+                  "questionId": 7,
+                  "name": "Coca-Cola light, Sinaasappelsap, Coca-Cola regular",
+                  "isAnswer": true,
+                  "description": "Top!  Per 100ml zit er Coca-Cola light: 0g, Sinaasappelsap: 8g en Coca-Cola regular: 10.6g. Zoals je ziet bevat sinaasappelsap bijna evenveel suiker als Coca-Cola regular.",
+                  "url": "http://www.voedingscentrum.nl/encyclopedie/suiker.aspx"
+              },
+              {
+                  "id": 4,
+                  "questionId": 7,
+                  "name": "Coca-Cola regular, Coca-Cola light, Sinaasappelsap",
+                  "isAnswer": false
+              }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 8,
+            "name": "Van koffie verlies je extra vocht.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 8,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 8,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Elke volwassene heeft zo een 1,5 tot 2 liter vocht per dag nodig. Er wordt vaak gedacht dat dranken met cafeïne vocht ontneemt. Dat is niet waar. Cafeïne stimuleert de de nieren die er voor zorgen dat er sneller vocht het lichaam verlaat. Er verlaat niet méér vocht het lichaam. Dranken met cafeïne leveren ook gewoon vocht aan het lichaam. Energiedrank ik niet aangeraden omdat er veel toegevoegde suikers in zitten.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/cafeine.aspx"
                 }
             ],
             "questionType": {

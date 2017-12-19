@@ -1,29 +1,219 @@
 {
     "id": 2,
-    "name": "Koolhydraten quiz",
-    "description": "Deze quiz gaat over Koolhydraten",
+    "name": "Medium quiz",
+    "description": "Deze quiz bevat medium vragen",
     "questions": [
         {
             "id": 1,
-            "name": "Zijn koolhydraten slecht?",
+            "name": "Verzadigd vet en onverzadigd vet bevatten evenveel calorieën.",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId":  1,
-                    "name": "Ja",
-                    "isAnswer": false
+                    "name": "Waar",
+                    "isAnswer": true
                 },
                 {
                     "id": 2,
                     "questionId":  1,
-                    "name": "Nee",
-                    "isAnswer": true
+                    "name": "Niet waar",
+                    "isAnswer": false,
+                    "description": "Verzadigd vet en onverzadigd vet bevatten allebei 9 kcal per gram vet. Wel is onverzadigd vet goed voor het lichaam, omdat het je organen beschermt en het een belangrijke energiebron is van je lichaam. Probeer de inname van verzadigd vet zo laag mogelijk te houden dan verklein je de kans op hart en vaatziekten.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 2,
+            "name": "Welke van de twee bevat meer vet?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  2,
+                    "name": "Roomijs",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  2,
+                    "name": "Avocado",
+                    "isAnswer": true,
+                    "description": "Een avocado bevat 19,5g vet terwijl roomijs maar 11g vet bevat. Wel is het zo dat een avocado een stuk gezonder is voor je dan een bak roomijs. Roomijs heeft 7g verzadigd vet terwijl een avocado maar 2g verzadigd vet heeft.",
+                    "url": "http://nevo-online.rivm.nl"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "Light producten bevatten minder kcal dan producten die niet light zijn.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  3,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  3,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Als er 'light' op een product staat dan heeft het vergeleken met het gewone product minimaal 30% minder energie (kcal), vet of suikers. Het staat op de verpakking waarvan er minder inzit. Wanneer er minder vet in en product zit is dit vaak vervangen door koolhydraten en eiwitten die ook energie bevatten. Het product bevat dan misschien meer calorieën dan je zou verwachten. Bij zoete light-producten, zoals light-frisdranken, is (een deel van) de suiker vervangen door zoetstoffen.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/light2.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Bruin brood is altijd gezonder dan wit brood.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  4,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  4,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Correct! Niet al het bruine brood is gezond omdat soms wit brood bruin gemaakt wordt. Zie hier een leuk filmpje van de keuringsdienst van waarde.",
+                    "url": "https://www.npo3.nl/kvw-kort-brood/20-11-2017/WO_KN_11738522"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Roomboter is ongezonder dan Margarine.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  5,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description": "Margarine bevat minder kcal dan roomboter en minder verzadigde vetten. De andere voedingsstoffen in margarine en roomboter zijn in zulke kleine maten dat ze te verwaarlozen zijn.",
+                    "url": "http://nevo-online.rivm.nl"
+                },
+                {
+                    "id": 2,
+                    "questionId":  5,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 6,
+            "name": "Het is beter om te koken in bijvoorbeeld kokosvet dan olijfolie.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  6,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  6,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Kokos komt van de kokosnoot. Kokosvet bevat het meeste verzadigd vet van alle vet- en olie soorten. Kokosvet wordt vaak kokosolie genoemd. Verzadigd vet staat erom bekend niet goed te zijn voor de gezondheid. Het verhoogt het risico op hart- en vaatziekten. Het is dan ook het advies om kokosproducten en kokosvet alleen bij uitzondering te eten. Door de aanleg van kokosplantages worden mogelijk bossen gekapt. Verder worden er bij de teelt bestrijdingsmiddelen gebruikt en is er veel water nodig.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/kokos-en-kokosvet.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 7,
+            "name": "Je kunt beter geen aardappels of pasta eten. Dit zijn namelijk dikmakers.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  7,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  7,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "De koolhydraten die in aardappels en pasta zitten zijn noodzakelijk voor het menselijk lichaam als je bijna geen koolhydraten eet zal je lichaam eiwitten gaan gebruiken voor energie waardoor je een eiwittekort kan krijgen, of je krijgt al je energie binnen via vetten waardoor je juist dikker wordt dan als je wel pasta en aardappels zou eten.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/koolhydraten.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 8,
+            "name": "Hoeveel kopjes koffie is een gezond gemiddelde om te drinken?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  8,
+                    "name": "1-2",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  8,
+                    "name": "2-4",
+                    "isAnswer": true,
+                    "description": "Koffie zonder suiker past in een gezond eetpatroon met de Schijf van Vijf. Alleen kookkoffie en koffie gezet met een cafetière staan niet in de Schijf van Vijf omdat er veel cafestol in zit. Dat is een stof die het LDL-cholesterol verhoogt en daarom niet goed is voor de bloedvaten. Vanwege het cafestol geldt ook het advies niet meer dan 2 tot 3 kopjes espresso of koffie van cups te drinken. Verder gelden er beperkingen vanwege cafeïne in koffie. Gezonde volwassenen kunnen ongeveer 400 milligram cafeïne per dag innemen zonder dat er negatieve effecten te verwachten zijn. Dat komt neer op ongeveer 4 kopjes koffie per dag.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/koffie.aspx"
                 },
                 {
                     "id": 3,
-                    "questionId":  1,
-                    "name": "Geen van bovenstaande",
+                    "questionId":  8,
+                    "name": "4-6",
+                    "isAnswer": false
+                },
+                {
+                    "id": 4,
+                    "questionId":  8,
+                    "name": "Er is geen limiet",
                     "isAnswer": false
                 }
             ],
