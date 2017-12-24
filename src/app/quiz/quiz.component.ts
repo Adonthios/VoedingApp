@@ -18,6 +18,7 @@ export class QuizComponent implements OnInit {
   currentAnswer: string;
   currentDescription: string;
   currentUrl: string;
+  state: string;
 
   config: QuizConfig = {
     'allowBack': true,
@@ -45,7 +46,8 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
     this.quizes = this.quizService.getAll();
     this.quizName = this.quizes[0].id;
-    this.loadQuiz(this.quizName);
+    // this.loadQuiz(this.quizName);
+    this.state = "quizLoading";
   }
 
   loadQuiz(quizName: string) {
@@ -54,6 +56,7 @@ export class QuizComponent implements OnInit {
       this.pager.count = this.quiz.questions.length;
     });
     this.mode = 'quiz';
+    this.state = "quizStarted";
   }
 
   get filteredQuestions() {
@@ -96,5 +99,11 @@ export class QuizComponent implements OnInit {
     console.log(this.quiz.questions);
 
     this.mode = 'result';
+    this.state = "quizLoading"
+  }
+
+  stopQuiz() {
+    this.state = "quizLoading";
+    this.quiz = new Quiz(null);
   }
 }

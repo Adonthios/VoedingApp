@@ -3,7 +3,7 @@
     <h3>Quizes over eten</h3>
   </div>
 
-  <div class="col-md-6 text-sm-right">
+  <div *ngIf="state=='quizLoading'" class="col-md-6 text-sm-right">
     Selecteer quiz
     <select [(ngModel)]="quizName" (change)="loadQuiz(quizName)">
         <option *ngFor="let quiz of quizes" [value]="quiz.id">{{quiz.name}}</option>
@@ -11,8 +11,9 @@
   </div>
 </div>
 
-<div id="quiz">
+<div *ngIf="state=='quizStarted'" id="quiz">
   <h1 class="text-sm-center">{{quiz.name}}</h1>
+  <span (click)="stopQuiz();">Stop quiz</span>
   <hr />
 
   <div *ngIf="mode=='quiz' && quiz">
@@ -77,8 +78,8 @@
       </div>
     </div>
     <h4 class="alert alert-info text-sm-center">Bedankt voor het invullen!</h4>
+    <hr />
   </div>
-  <hr />
 
   <!-- <div *ngIf="mode!='result'"> -->
     <!-- <button class="btn btn-default" (click)="mode = 'quiz'">Quiz</button>
