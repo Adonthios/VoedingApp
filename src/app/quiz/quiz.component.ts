@@ -92,14 +92,15 @@ export class QuizComponent implements OnInit {
   };
 
   onSubmit() {
+    this.mode = 'result';
+    this.state = "quizLoading";
+
     let answers = [];
     this.quiz.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered }));
 
     // Post your data to the server here. answers contains the questionId and the users' answer.
-    console.log(this.quiz.questions);
-
-    this.mode = 'result';
-    this.state = "quizLoading"
+    console.log(answers);
+    console.log("Mode: " + this.mode);
   }
 
   stopQuiz() {
