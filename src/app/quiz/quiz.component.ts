@@ -46,7 +46,6 @@ export class QuizComponent implements OnInit {
   ngOnInit() {
     this.quizes = this.quizService.getAll();
     this.quizName = this.quizes[0].id;
-    // this.loadQuiz(this.quizName);
     this.state = "quizLoading";
   }
 
@@ -78,7 +77,6 @@ export class QuizComponent implements OnInit {
     if (index >= 0 && index < this.pager.count) {
       this.pager.index = index;
       this.mode = 'quiz';
-
       this.currentAnswer = "";
     }
   }
@@ -92,18 +90,26 @@ export class QuizComponent implements OnInit {
   };
 
   onSubmit() {
-    this.mode = 'result';
-    this.state = "quizLoading";
-
     let answers = [];
     this.quiz.questions.forEach(x => answers.push({ 'quizId': this.quiz.id, 'questionId': x.id, 'answered': x.answered }));
 
-    // Post your data to the server here. answers contains the questionId and the users' answer.
-    console.log(answers);
-    console.log("Mode: " + this.mode);
+    this.resetPager();
+    this.currentAnswer = "";
+    this.mode = 'result';
+    this.state = "quizLoading";
+  }
+
+  resetPager() {
+    this.pager = {
+      index: 0,
+      size: 1,
+      count: 1
+    };
   }
 
   stopQuiz() {
+    this.resetPager();
+    this.currentAnswer = "";
     this.state = "quizLoading";
     this.quiz = new Quiz(null);
   }
