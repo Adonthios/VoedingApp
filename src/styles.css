@@ -36,6 +36,14 @@ background: 0 0;
     color: #E06D08;
 }
 
+
+/* Toolbar */
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+
 .answer.good, .answer-description.good {
     display: block;
     background-color:#aaeeaa;

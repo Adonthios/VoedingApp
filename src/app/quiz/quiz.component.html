@@ -1,27 +1,63 @@
 <mat-toolbar color="primary">
-  <span>Angular Material Example</span>
+
+  <!-- <span>
+    <mat-icon mat-icon-button [matMenuTriggerFor]="menu">menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+  </span> -->
+
+
+  <span *ngIf="state=='quizLoading'">Selecteer een quiz</span>
+  <span *ngIf="state=='quizStarted'">{{quiz.name}}</span>
+
+  <span class="spacer"></span>
+
+  <span *ngIf="state=='quizStarted'" (click)="stopQuiz();">
+    Stop quiz
+    <mat-icon mat-icon-button>clear</mat-icon>
+  </span>
+
+
+  <!-- <span>Quizes over eten</span> -->
+
 </mat-toolbar>
 
 <div class="row">
-  <div class="col-md-6">
-    <h3>Quizes over eten</h3>
-  </div>
-
   <div *ngIf="state=='quizLoading'" class="col-md-6 text-sm-right">
-    Selecteer quiz
-      <ul>
-        <li *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)">{{quiz.name}}</li>
-      </ul>
+
+    <mat-list role="list">
+        <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon> {{quiz.name}}</mat-list-item>
+    </mat-list>
   </div>
 
     <div *ngIf="state=='quizStarted'" id="quiz">
-      <h1 class="text-sm-center">{{quiz.name}}</h1>
+      <!-- <h1 class="text-sm-center">{{quiz.name}}</h1>
       <span (click)="stopQuiz();">Stop quiz</span>
-      <hr />
+      <hr /> -->
 
+  </div>
+
+  <div class="row">
       <div *ngIf="mode=='quiz' && quiz">
         <div *ngFor="let question of filteredQuestions;">
-          <div class="badge badge-info">Vraag {{pager.index + 1}}/{{pager.count}}.</div>
+          <br />
+          <span>
+            <b class="badge badge-info">Vraag {{pager.index + 1}} van {{pager.count}}</b>
+            <mat-progress-bar mode="determinate" value="{{quizProgress}}"></mat-progress-bar>
+          </span>
+
           <h2><span [innerHTML]="question.name"></span></h2>
           <div class="row text-left options">
 

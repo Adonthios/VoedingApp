@@ -3,8 +3,6 @@ import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
 
-//import { MatToolbarModule } from '@angular/material';
-
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -21,6 +19,7 @@ export class QuizComponent implements OnInit {
   currentDescription: string;
   currentUrl: string;
   state: string;
+  quizProgress: number;
 
   config: QuizConfig = {
     'allowBack': true,
@@ -43,6 +42,7 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
+
   constructor(private quizService: QuizService) { }
 
   ngOnInit() {
@@ -55,6 +55,7 @@ export class QuizComponent implements OnInit {
     this.quizService.get(quizName).subscribe(res => {
       this.quiz = new Quiz(res);
       this.pager.count = this.quiz.questions.length;
+      this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;
     });
     this.mode = 'quiz';
     this.state = "quizStarted";
@@ -80,6 +81,7 @@ export class QuizComponent implements OnInit {
       this.pager.index = index;
       this.mode = 'quiz';
       this.currentAnswer = "";
+      this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;
     }
   }
 

@@ -9,9 +9,14 @@ import { QuizComponent } from './quiz/quiz.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+// Material gedoe :D
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -24,8 +29,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HttpModule,
 
     BrowserAnimationsModule,
-
     MatToolbarModule,
+    MatListModule,
+    MatMenuModule,
+    MatIconModule,
+    MatProgressBarModule,
 
     AngularFireModule.initializeApp(environment.firebase)
   ],
