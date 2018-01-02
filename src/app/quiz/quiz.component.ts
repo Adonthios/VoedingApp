@@ -20,6 +20,8 @@ export class QuizComponent implements OnInit {
   currentUrl: string;
   state: string;
   quizProgress: number;
+  timesGuessed: number;
+  correctFirstTime: number;
 
   config: QuizConfig = {
     'allowBack': true,
@@ -42,7 +44,6 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-
   constructor(private quizService: QuizService) { }
 
   ngOnInit() {
@@ -57,6 +58,7 @@ export class QuizComponent implements OnInit {
       this.pager.count = this.quiz.questions.length;
       this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;
     });
+    this.correctFirstTime = this.timesGuessed = 0;
     this.mode = 'quiz';
     this.state = "quizStarted";
   }
@@ -72,13 +74,20 @@ export class QuizComponent implements OnInit {
     }
 
     this.currentAnswer = this.isCorrect(question);
+    this.timesGuessed++;
+
     this.currentDescription = option.description;
     this.currentUrl = option.url;
+
+    if ((this.isCorrect(question) == 'Goed') && (this.timesGuessed <= 1)) {
+      this.correctFirstTime++;
+    }
   }
 
   goTo(index: number) {
     if (index >= 0 && index < this.pager.count) {
       this.pager.index = index;
+      this.timesGuessed = 0;
       this.mode = 'quiz';
       this.currentAnswer = "";
       this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;

@@ -1,160 +1,170 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-
 /* You can add global styles to this file, and also import other style files */
-h1{
-    color:#740808;
-    font-weight:normal;
-}
-h2{
-    font-weight:normal;
+
+.primary {
+  color: #ff9940;
+  background: #ff9940;
 }
 
-hr{
-    border:none;
-    border-top:1px solid #ddd;
-    background:none;
-    margin:8px 0;
+h1 {
+  color: #740808;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  background: none;
+  margin: 8px 0;
 }
 
 .btn {
-padding: 9px 14px;
-font-size: 1.3em;
-line-height: normal;
-text-align: center;
-cursor: pointer;
-border: 1px solid #E06D08;
-border-radius: 2px;
-color: #E06D08;
--webkit-transition: background .4s;
-transition: background .4s;
-background: 0 0;
+  padding: 9px 14px;
+  font-size: 1.3em;
+  line-height: normal;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #E06D08;
+  border-radius: 2px;
+  color: #E06D08;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  background: 0 0;
 }
 
 .btn:hover {
-    background: rgba(224,109,8,.1);
-    color: #E06D08;
+  background: rgba(224, 109, 8, .1);
+  color: #E06D08;
 }
 
-
 /* Toolbar */
+
 .spacer {
   flex: 1 1 auto;
 }
 
-
-
 .answer.good, .answer-description.good {
-    display: block;
-    background-color:#aaeeaa;
-    font-size:20px;
-    padding:10px;
-    margin:3px;
+  display: block;
+  background-color: #aaeeaa;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
 }
+
 .answer.wrong, .answer-description.wrong {
-    display: block;
-    background-color:#EF5350;
-    font-size:20px;
-    padding:10px;
-    margin:3px;
+  display: block;
+  background-color: #EF5350;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
 }
 
 .answer-url {
-    display: block;
-    background-color:#fff7be;
-    font-size:20px;
-    padding:10px;
-    margin:3px;
+  display: block;
+  background-color: #fff7be;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
 }
 
-.option{
-    display: block;
-    background-color:#ff9940;
-    font-size:20px;
-    padding:10px;
-    margin:3px;
+.option {
+  display: block;
+  background-color: #ff9940;
+  font-size: 20px;
+  padding: 10px;
+  margin: 3px;
 }
-.option label{
-    font-weight:normal;
-}
-    #quiz .options input[type=checkbox] {
-        background-color:#eee;
-        border:1px solid #ccc;
-        height:22px;
-        width:22px;
-    }
 
-div.review{
-    text-align:center;
+.option label {
+  font-weight: normal;
 }
-div.review > div {
-    cursor:pointer;
+
+#quiz .options input[type=checkbox] {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  height: 22px;
+  width: 22px;
+}
+
+div.review {
+  text-align: center;
+}
+
+div.review>div {
+  cursor: pointer;
 }
 
 .answered {
-    background-color:#ccffcc;
-    border:1px solid #aaeeaa;
-    margin:2px 0;
-    padding:12px;
+  background-color: #ccffcc;
+  border: 1px solid #aaeeaa;
+  margin: 2px 0;
+  padding: 12px;
 }
 
 .not-answered {
-    background-color:#ffcccc;
-    border:1px solid #eeaaaa;
-    margin:2px 0;
-    padding:12px;
+  background-color: #ffcccc;
+  border: 1px solid #eeaaaa;
+  margin: 2px 0;
+  padding: 12px;
 }
 
-.result-question{
-    background-color:#eee;
-    margin:4px;
-    padding:6px;
+.result-question {
+  background-color: #eee;
+  margin: 4px;
+  padding: 6px;
 }
-
 
 /* Create Quiz Styles */
 .create-quiz .question {
-    text-align:left;
-}
-.create-quiz input[type=text]{
-    border:1px solid #ddd;
-    width:95%;
-}
-.create-quiz .tb-quiz-name{
-    background-color:#ccffcc;
-    text-align:center;
+  text-align: left;
 }
 
-.create-quiz .tb-desc{
-    background-color:#fff;
+.create-quiz input[type=text] {
+  border: 1px solid #ddd;
+  width: 95%;
 }
 
-.create-quiz .options > div{
-    margin-left:20px;
+.create-quiz .tb-quiz-name {
+  background-color: #ccffcc;
+  text-align: center;
 }
-.create-quiz .options input[type=checkbox]{
-    border: 1px solid #262626;
-    display: inline-block;
-    height:20px;
-    margin-top:10px;
-    margin-bottom:0;
-    padding:0;
-    width:20px;
-    -webkit-appearance:checkbox;
+
+.create-quiz .tb-desc {
+  background-color: #fff;
+}
+
+.create-quiz .options>div {
+  margin-left: 20px;
+}
+
+.create-quiz .options input[type=checkbox] {
+  border: 1px solid #262626;
+  display: inline-block;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 0;
+  width: 20px;
+  -webkit-appearance: checkbox;
 }
 
 @media only screen and (max-width: 480px) {
-    h1,.h1{
-        font-size:22px;
-    }
-    h2,.h2{
-        font-size:20px;
-    }
-    h3,.h3{
-        font-size:18px;
-    }
-    .option {
-        font-size: 16px;
-        padding: 6px;
-    }
+  h1, .h1 {
+    font-size: 22px;
+  }
+  h2, .h2 {
+    font-size: 20px;
+  }
+  h3, .h3 {
+    font-size: 18px;
+  }
+  .option {
+    font-size: 16px;
+    padding: 6px;
+  }
 }

@@ -1,23 +1,17 @@
 <mat-toolbar color="primary">
-
-  <!-- <span>
+  <span>
     <mat-icon mat-icon-button [matMenuTriggerFor]="menu">menu</mat-icon>
     <mat-menu #menu="matMenu">
       <button mat-menu-item>
-        <mat-icon>dialpad</mat-icon>
-        <span>Redial</span>
-      </button>
-      <button mat-menu-item disabled>
-        <mat-icon>voicemail</mat-icon>
-        <span>Check voicemail</span>
+        <mat-icon>perm_identity</mat-icon>
+        <span>Quiz</span>
       </button>
       <button mat-menu-item>
-        <mat-icon>notifications_off</mat-icon>
-        <span>Disable alerts</span>
+        <mat-icon>list</mat-icon>
+        <span>Ranglijst</span>
       </button>
     </mat-menu>
-  </span> -->
-
+  </span>
 
   <span *ngIf="state=='quizLoading'">Selecteer een quiz</span>
   <span *ngIf="state=='quizStarted'">{{quiz.name}}</span>
@@ -28,53 +22,41 @@
     Stop quiz
     <mat-icon mat-icon-button>clear</mat-icon>
   </span>
-
-
-  <!-- <span>Quizes over eten</span> -->
-
 </mat-toolbar>
 
 <div class="row">
   <div *ngIf="state=='quizLoading'" class="col-md-6 text-sm-right">
-
     <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon> {{quiz.name}}</mat-list-item>
+      <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon> {{quiz.name}}</mat-list-item>
     </mat-list>
   </div>
 
-    <div *ngIf="state=='quizStarted'" id="quiz">
-      <!-- <h1 class="text-sm-center">{{quiz.name}}</h1>
-      <span (click)="stopQuiz();">Stop quiz</span>
-      <hr /> -->
-
-  </div>
-
   <div class="row">
-      <div *ngIf="mode=='quiz' && quiz">
-        <div *ngFor="let question of filteredQuestions;">
-          <br />
-          <span>
-            <b class="badge badge-info">Vraag {{pager.index + 1}} van {{pager.count}}</b>
-            <mat-progress-bar mode="determinate" value="{{quizProgress}}"></mat-progress-bar>
-          </span>
+    <div *ngIf="mode=='quiz' && quiz">
+      <div *ngFor="let question of filteredQuestions;">
+        <br />
+        <span>
+          <b class="badge badge-info">Vraag {{pager.index + 1}} van {{pager.count}}</b>
+          <mat-progress-bar mode="determinate" value="{{quizProgress}}"></mat-progress-bar>
+        </span>
 
-          <h2><span [innerHTML]="question.name"></span></h2>
-          <div class="row text-left options">
+        <h1 [innerHTML]="question.name">{{question.name}}</h1>
 
-            <div *ngIf="currentAnswer" class="col-md-6">
-              <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
-              <button class="btn btn-default" *ngIf="pager.index + 1 == pager.count" (click)="onSubmit();">Quiz afronden</button>
-            </div>
+        <div class="row text-left options">
+          <div *ngIf="currentAnswer" class="col-md-6">
+            <button button class="btn btn-primary" mat-button color="primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
+            <button button class="btn btn-primary" mat-button color="primary" *ngIf="pager.index + 1 == pager.count" (click)="onSubmit();">Quiz afronden</button>
+          </div>
 
-            <div class="col-md-6" *ngFor="let option of question.options">
-              <div class="">
-                <label class="option" [attr.for]="option.id">
-                    <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
-                    {{option.name}}
-                </label>
-              </div>
+          <div class="col-md-6" *ngFor="let option of question.options">
+            <div class="">
+              <label class="option" [attr.for]="option.id">
+                  <input id="{{option.id}}" type="checkbox" [(ngModel)]="option.selected" (change)="onSelect(question, option);" />
+                  {{option.name}}
+              </label>
             </div>
           </div>
+        </div>
 
         <div *ngIf="currentAnswer" class="col-md-6">
           <div class="answer {{ currentAnswer == 'Goed'? 'good': 'wrong'}}"> {{ currentAnswer == 'Goed'? 'Goed gedaan!': 'Dit antwoord is helaas fout, probeer het opnieuw'}}</div>
@@ -82,25 +64,18 @@
           <div *ngIf="currentUrl" class="answer-url {{ currentAnswer == 'Goed'? 'good': 'wrong'}}">Zie <a target="_blank" href="{{currentUrl}}">{{currentUrl}}</a> voor meer informatie.</div>
           <hr />
 
-          <button class="btn btn-primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
-          <button class="btn btn-default" *ngIf="pager.index + 1 == pager.count" (click)="onSubmit();">Quiz afronden</button>
+          <button button class="btn btn-primary" mat-button color="primary" *ngIf="pager.index + 1 < pager.count" (click)="goTo(pager.index + 1);">Volgende</button>
+          <button button class="btn btn-primary" mat-button color="primary" *ngIf="pager.index + 1 == pager.count" (click)="onSubmit();">Quiz afronden</button>
         </div>
       </div>
-
-  <!-- Misschien terug laten komen, dit is het overzicht :P -->
-    <!-- <div class="row review" *ngIf="mode=='review'">
-      <div class="col-sm-4" *ngFor="let question of quiz.questions; let index = index;">
-        <div (click)="goTo(index)" class="{{ isAnswered(question) == 'Answered'? 'answered': 'not-answered' }}">{{index + 1}}. {{ isAnswered(question) }}</div>
-      </div>
-    </div> -->
-
+    </div>
   </div>
-</div>
 
-<div class="result" *ngIf="mode=='result'">
-     <h2>Quiz resultaat</h2>
-     <div *ngFor="let question of quiz.questions; let index = index">
-       <div class="result-question answer {{ isCorrect(question) == 'Goed'? 'good': 'wrong'}}">
+  <div class="result" *ngIf="mode=='result'">
+    <h2>Quiz resultaat</h2>
+    <h3>Je hebt er {{correctFirstTime}} in één keer correct</h3>
+    <div *ngFor="let question of quiz.questions; let index = index">
+      <div class="result-question answer {{ isCorrect(question) == 'Goed'? 'good': 'wrong'}}">
         <h4>{{index + 1}}. {{question.name}}</h4>
         <div class="row">
           <div class="col-md-6" *ngFor="let Option of question.options">
