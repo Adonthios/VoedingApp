@@ -9,6 +9,10 @@ import { QuizComponent } from './quiz/quiz.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,11 @@ import { environment } from '../environments/environment';
     BrowserModule,
     FormsModule,
     HttpModule,
+
+    BrowserAnimationsModule,
+
+    MatToolbarModule,
+
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],

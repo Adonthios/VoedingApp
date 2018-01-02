@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
+
+//import { MatToolbarModule } from '@angular/material';
 
 @Component({
   selector: 'app-quiz',
@@ -10,6 +11,7 @@ import { Option, Question, Quiz, QuizConfig } from '../models/index';
   styleUrls: ['./quiz.component.css'],
   providers: [QuizService]
 })
+
 export class QuizComponent implements OnInit {
   quizes: any[];
   quiz: Quiz = new Quiz(null);
