@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
+import {AuthService} from '../services/auth.service';
 
 @Component({
   selector: 'app-quiz',
@@ -44,7 +45,7 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService) { }
+  constructor(private quizService: QuizService, public authService: AuthService) { }
 
   ngOnInit() {
     this.quizes = this.quizService.getAll();
@@ -125,5 +126,9 @@ export class QuizComponent implements OnInit {
     this.currentAnswer = "";
     this.state = "quizLoading";
     this.quiz = new Quiz(null);
+  }
+
+  logout() {
+    this.authService.signOut();
   }
 }

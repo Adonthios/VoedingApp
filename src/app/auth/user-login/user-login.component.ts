@@ -44,6 +44,10 @@ export class UserLoginComponent implements OnInit {
         .then(() => {
           this.router.navigate(['/quiz'])
         }).catch(_error => {
+          let error: any = _error;
+          if (error.code == "auth/email-already-in-use") {
+            _error.message = "Het e-mail adres is al in gebruik";
+          }
           this.error = _error
           this.router.navigate(['/'])
         })
@@ -65,17 +69,17 @@ export class UserLoginComponent implements OnInit {
 
   validateForm(email: string, password: string): boolean {
     if (email.length === 0) {
-      this.errorMessage = 'Please enter Email!'
+      this.errorMessage = 'Er is geen e-mail adres ingevuld'
       return false
     }
 
     if (password.length === 0) {
-      this.errorMessage = 'Please enter Password!'
+      this.errorMessage = 'Er is geen wachtwoord ingevuld'
       return false
     }
 
-    if (password.length < 6) {
-      this.errorMessage = 'Password should be at least 6 characters!'
+    if (password.length < 3) {
+      this.errorMessage = 'Het wachtwoord moet uit minimaal 3 tekens bestaan'
       return false
     }
 

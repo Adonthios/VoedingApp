@@ -24,8 +24,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+
 
 @NgModule({
   declarations: [
@@ -45,9 +50,11 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatButtonModule,
     MatListModule,
     MatMenuModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatIconModule,
     MatProgressBarModule,
-
+    MatCardModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule // for database
   ],

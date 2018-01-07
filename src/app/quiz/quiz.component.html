@@ -10,6 +10,9 @@
         <mat-icon>list</mat-icon>
         <span>Ranglijst</span>
       </button>
+      <button (click)="logout()" mat-menu-item>
+        Uitloggen: {{ authService.currentUserName }}
+      </button>
     </mat-menu>
   </span>
 
