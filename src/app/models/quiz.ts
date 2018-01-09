@@ -10,6 +10,7 @@ export class Quiz {
 
     constructor(data: any) {
         if (data) {
+          console.log(data);
             this.id = data.id;
             this.name = data.name;
             this.description = data.description;

@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
+import { QuizResult } from '../models/quiz-result';
+import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
-import {AuthService} from '../services/auth.service';
+import { AuthService }  from '../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -24,6 +26,16 @@ export class QuizComponent implements OnInit {
   quizProgress: number;
   timesGuessed: number;
   correctFirstTime: number;
+
+  // This object keeps track of the users progress within a quiz
+  toCreateQuizResult: QuizResult = {
+    '$key' : "",
+    'uid': "",
+    'email' : "",
+    'quizid' : 0,
+    'correctFirstTime': 0
+  };
+  key: string;
 
   config: QuizConfig = {
     'allowBack': true,
@@ -63,6 +75,12 @@ export class QuizComponent implements OnInit {
       this.quiz = new Quiz(res);
       this.pager.count = this.quiz.questions.length;
       this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;
+
+      // update quiz result
+      this.toCreateQuizResult.quizid = this.quiz.id;
+      this.toCreateQuizResult.uid = this.authService.currentUserId;
+      this.toCreateQuizResult.email = this.authService.currentUserName;
+      this.key = this.quizService.createQuizResult(this.toCreateQuizResult);
     });
     this.correctFirstTime = this.timesGuessed = 0;
     this.mode = 'quiz';
@@ -88,6 +106,9 @@ export class QuizComponent implements OnInit {
     if ((this.isCorrect(question) == 'Goed') && (this.timesGuessed <= 1)) {
       this.correctFirstTime++;
     }
+    // update quiz result data
+    var quizResultUpdate = { correctFirstTime: this.correctFirstTime}
+    this.quizService.updateQuizResult(this.key, quizResultUpdate);
   }
 
   goTo(index: number) {
