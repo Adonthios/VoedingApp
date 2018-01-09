@@ -17,6 +17,7 @@ import {AngularFireAuth} from 'angularfire2/auth';
 import {AuthService} from './services/auth.service';
 import {UserLoginComponent} from './auth/user-login/user-login.component';
 import {UserInfoComponent} from './auth/user-info/user-info.component';
+import {RanklistComponent} from './ranklist/ranklist.component';
 
 // Material gedoe :D
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -37,7 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppComponent,
     QuizComponent,
     UserLoginComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    RanklistComponent
   ],
   imports: [
     BrowserModule,

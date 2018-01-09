@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
-  <span>
     <mat-icon mat-icon-button [matMenuTriggerFor]="menu">menu</mat-icon>
+    <span>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item (click)="showQuiz()">
         <mat-icon>perm_identity</mat-icon>
         <span>Quiz</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item (click)="showList()">
         <mat-icon>list</mat-icon>
         <span>Ranglijst</span>
       </button>
@@ -25,9 +25,12 @@
     Stop quiz
     <mat-icon mat-icon-button>clear</mat-icon>
   </span>
+  <mat-icon *ngIf="state=='quizStarted'" (click)="stopQuiz();" mat-icon-button>clear</mat-icon>
 </mat-toolbar>
 
-<div class="row">
+<ranklist *ngIf="show=='list'"></ranklist>
+
+<div *ngIf="show=='quiz'" class="row">
   <h1>Quiz</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
