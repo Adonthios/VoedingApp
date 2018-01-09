@@ -20,7 +20,7 @@
 					<button mat-button type="submit" class="btn btn-success">Registreer</button>
 			</form>
 
-			<h4 class="text-primary" (click)="changeForm()">Heb je al een account? >> Log In</h4>
+			<h4 class="text-primary">Heb je al een account?<button mat-button (click)="changeForm()" class="btn btn-success">Log In</button></h4>
 		</div>
 
 		<div style="width: 350px;" *ngIf="!isNewUser">
@@ -42,7 +42,7 @@
 				<button mat-button type="submit" class="btn btn-success">Login</button>
 			</form>
 
-			<h4 class="text-primary" (click)="changeForm()">Heb je nog geen account? >> Registreer</h4>
+			<h4 class="text-primary" (click)="changeForm()">Heb je nog geen account? <button mat-button (click)="changeForm()" class="btn btn-success">Registreer</button></h4>
 
 		</div>
 	</div>
