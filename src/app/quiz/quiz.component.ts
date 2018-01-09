@@ -3,6 +3,7 @@ import { QuizService } from '../services/quiz.service';
 import { HelperService } from '../services/helper.service';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
 import {AuthService} from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-quiz',
@@ -45,12 +46,16 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService, public authService: AuthService) { }
+  constructor(private quizService: QuizService, public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.quizes = this.quizService.getAll();
-    this.quizName = this.quizes[0].id;
-    this.state = "quizLoading";
+    if (!this.authService.isUserEmailLoggedIn) {
+      this.router.navigate(['/'])
+    } else {
+      this.quizes = this.quizService.getAll();
+      this.quizName = this.quizes[0].id;
+      this.state = "quizLoading";
+    }
   }
 
   loadQuiz(quizName: string) {

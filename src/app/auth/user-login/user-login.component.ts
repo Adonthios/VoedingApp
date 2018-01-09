@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  isNewUser = true;
+  isNewUser = false;
   email = '';
   password = '';
   errorMessage = '';
