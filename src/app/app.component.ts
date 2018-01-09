@@ -9,4 +9,18 @@ import { QuizComponent } from './quiz/quiz.component'
 })
 export class AppComponent {
   title = 'app';
+  show: string = 'quiz';
+
+  showQuiz() {
+    this.show = "quiz";
+  }
+
+  showList() {
+    this.show = "list";
+  }
+
+
+
+
+
 }

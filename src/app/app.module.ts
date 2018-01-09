@@ -9,6 +9,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 
+import { RanklistComponent } from './ranklist/ranklist.component';
 
 // Material gedoe :D
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -18,11 +19,13 @@ import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    RanklistComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatMenuModule,
     MatIconModule,
     MatProgressBarModule,
+    MatTableModule,
 
     AngularFireModule.initializeApp(environment.firebase)
   ],

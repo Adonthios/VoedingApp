@@ -1,30 +1,9 @@
-<mat-toolbar color="primary">
-  <span>
-    <mat-icon mat-icon-button [matMenuTriggerFor]="menu">menu</mat-icon>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <mat-icon>perm_identity</mat-icon>
-        <span>Quiz</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>list</mat-icon>
-        <span>Ranglijst</span>
-      </button>
-    </mat-menu>
-  </span>
-
-  <span *ngIf="state=='quizLoading'">Selecteer een quiz</span>
-  <span *ngIf="state=='quizStarted'">{{quiz.name}}</span>
-
-  <span class="spacer"></span>
-
-  <span *ngIf="state=='quizStarted'" (click)="stopQuiz();">
-    Stop quiz
-    <mat-icon mat-icon-button>clear</mat-icon>
-  </span>
-</mat-toolbar>
-
 <div class="row">
+  <h1>Quiz</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
   <div *ngIf="state=='quizLoading'" class="col-md-6 text-sm-right">
     <mat-list role="list">
       <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon> {{quiz.name}}</mat-list-item>
