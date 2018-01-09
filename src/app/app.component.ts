@@ -8,19 +8,6 @@ import { QuizComponent } from './quiz/quiz.component'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  show: string = 'quiz';
-
-  showQuiz() {
-    this.show = "quiz";
-  }
-
-  showList() {
-    this.show = "list";
-  }
-
-
-
-
-
+  title = 'Voedings quiz app';
+  description = "Alles over goede voeding";
 }

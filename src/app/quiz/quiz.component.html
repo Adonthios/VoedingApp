@@ -1,3 +1,32 @@
+<mat-toolbar color="primary">
+  <span>
+    <mat-icon mat-icon-button [matMenuTriggerFor]="menu">menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>perm_identity</mat-icon>
+        <span>Quiz</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>list</mat-icon>
+        <span>Ranglijst</span>
+      </button>
+      <button (click)="logout()" mat-menu-item>
+        Uitloggen: {{ authService.currentUserName }}
+      </button>
+    </mat-menu>
+  </span>
+
+  <span *ngIf="state=='quizLoading'">Selecteer een quiz</span>
+  <span *ngIf="state=='quizStarted'">{{quiz.name}}</span>
+
+  <span class="spacer"></span>
+
+  <span *ngIf="state=='quizStarted'" (click)="stopQuiz();">
+    Stop quiz
+    <mat-icon mat-icon-button>clear</mat-icon>
+  </span>
+</mat-toolbar>
+
 <div class="row">
   <h1>Quiz</h1>
   <p>
