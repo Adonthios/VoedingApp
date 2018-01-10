@@ -5,7 +5,6 @@ import { QuizResult } from '../models/quiz-result';
 import { FirebaseObjectObservable } from 'angularfire2/database';
 import { Option, Question, Quiz, QuizConfig } from '../models/index';
 import { AuthService }  from '../services/auth.service';
-import { RanklistComponent } from '../ranklist/ranklist.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -60,7 +59,7 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService, public authService: AuthService, private router: Router, private ranklistComponent: RanklistComponent) { }
+  constructor(private quizService: QuizService, public authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     if (!this.authService.isUserEmailLoggedIn) {

@@ -10,10 +10,6 @@ export class RanklistComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // Haal data op
-
-    // Set het in vars
-
-    // De html doet de rest
   }
+
 }
