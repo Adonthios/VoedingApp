@@ -12,6 +12,7 @@ export class UserLoginComponent implements OnInit {
   isNewUser = false;
   email = '';
   password = '';
+  displayName = '';
   errorMessage = '';
   error: { name: string, message: string } = { name: '', message: '' };
 
@@ -39,8 +40,8 @@ export class UserLoginComponent implements OnInit {
   onSignUp(): void {
     this.clearErrorMessage()
 
-    if (this.validateForm(this.email, this.password)) {
-      this.authService.signUpWithEmail(this.email, this.password)
+    if (this.validateForm(this.email, this.password, this.displayName)) {
+      this.authService.signUpWithEmail(this.email, this.password, this.displayName)
         .then(() => {
           this.router.navigate(['/quiz'])
         }).catch(_error => {
@@ -61,7 +62,7 @@ export class UserLoginComponent implements OnInit {
   onLoginEmail(): void {
     this.clearErrorMessage()
 
-    if (this.validateForm(this.email, this.password)) {
+    if (this.validateForm(this.email, this.password, "dummyname")) {
       this.authService.loginWithEmail(this.email, this.password)
         .then(() => this.router.navigate(['/quiz']))
         .catch(_error => {
@@ -71,9 +72,14 @@ export class UserLoginComponent implements OnInit {
     }
   }
 
-  validateForm(email: string, password: string): boolean {
+  validateForm(email: string, password: string, displayName: string): boolean {
     if (email.length === 0) {
       this.errorMessage = 'Er is geen e-mail adres ingevuld'
+      return false
+    }
+
+    if (displayName.length === 0) {
+      this.errorMessage = 'Er is geen naam ingevuld'
       return false
     }
 
