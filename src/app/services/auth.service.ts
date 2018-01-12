@@ -70,8 +70,6 @@ export class AuthService {
         }
       });
       this.userObservable.subscribe(myUser => {
-        console.log(key);
-        console.log(myUser);
         this.user = {
           'uid': myUser[0].uid,
           'displayName': myUser[0].displayName,
