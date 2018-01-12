@@ -12,14 +12,12 @@ export class AuthService {
     userObservables: FirebaseListObservable<User[]> = null;
 
     user: User = null;
-    authState: any = null;
 
     constructor(private db: AngularFireDatabase, private afAuth: AngularFireAuth, private router: Router) {
       this.userObservables = this.db.list('users');
       this.afAuth.authState.subscribe((auth) => {
-        this.authState = auth;
         if (auth != null) {
-          this.user = this.getUserByUID(auth.uid);
+          this.getUserByUID(auth.uid);
         }
       });
     }
@@ -29,11 +27,11 @@ export class AuthService {
     }
 
     get currentUserName(): string {
-      return this.user['displayName']
+      return this.user.displayName;
     }
 
     get currentUserEmail(): string {
-      return this.user['email']
+      return this.user.email;
     }
 
     get currentUser(): User {
@@ -51,7 +49,6 @@ export class AuthService {
     signUpWithEmail(email: string, password: string, displayName: string) {
       return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
         .then((user) => {
-          this.authState = user;
           this.user = {
             'uid': user.uid,
             'displayName': displayName,
@@ -65,7 +62,7 @@ export class AuthService {
         });
     }
 
-    getUserByUID(key: string): User {
+    getUserByUID(key: string): void {
       this.userObservable = this.db.object(`${this.dbPath}/${key}`);
       this.userObservable.subscribe(ga => {
         this.user = {
@@ -73,17 +70,7 @@ export class AuthService {
           'displayName': ga.displayName,
           'email': ga.email,
         }
-        console.log(this.user);
       });
-      //console.log(snapshot.key)
-      //console.log(snapshot.val()
-
-      var loadedUser: User = {
-        'uid': "",
-        'displayName': "",
-        'email': "",
-      };
-      return loadedUser;
     }
 
     saveNewUser(user: User): void {
@@ -93,8 +80,7 @@ export class AuthService {
     loginWithEmail(email: string, password: string) {
       return this.afAuth.auth.signInWithEmailAndPassword(email, password)
         .then((user) => {
-          this.authState = user;
-          this.user = this.getUserByUID(user.uid);
+          this.getUserByUID(user.uid);
         })
         .catch(error => {
           console.log(error)

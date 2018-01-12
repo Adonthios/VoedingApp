@@ -82,6 +82,8 @@ export class QuizComponent implements OnInit {
       this.toCreateQuizResult.uid = this.authService.currentUserId;
       this.toCreateQuizResult.email = this.authService.currentUserEmail;
       this.key = this.quizService.createQuizResult(this.toCreateQuizResult);
+      console.log("key", this.key);
+      console.log("toCreateQuizResult", this.toCreateQuizResult);
     });
     this.correctFirstTime = this.timesGuessed = 0;
     this.mode = 'quiz';

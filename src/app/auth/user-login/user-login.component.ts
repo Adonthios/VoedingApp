@@ -45,12 +45,10 @@ export class UserLoginComponent implements OnInit {
         .then(() => {
           this.router.navigate(['/quiz'])
         }).catch(_error => {
-          console.log(_error);
           let error: any = _error;
           if (error.code === "auth/email-already-in-use") {
             _error.message = "Het e-mail adres is al in gebruik";
           } else if (error.code === "auth/wrong-password") {
-            console.log("huh?");
             _error.message = "Het wachtwoord is niet juist";
           }
           this.error = _error
