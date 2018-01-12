@@ -1,29 +1,283 @@
 {
     "id": 3,
-    "name": "Vetten quiz",
-    "description": "Deze quiz gaat over Vetten",
+    "name": "Voeding quiz niveau #3",
+    "description": "Voeding quiz niveau #3",
     "questions": [
         {
             "id": 1,
-            "name": "Zijn vetten slecht?",
+            "name": "Alle zoetstoffen leveren geen kcal op.",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId":  1,
-                    "name": "Ja",
+                    "name": "Waar",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
                     "questionId":  1,
-                    "name": "Nee",
-                    "isAnswer": true
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Er zijn twee soorten zoetstoffen. Intensieve en niet-intensieve zoetstoffen (Polyolen). Intensieve zoetstoffen zijn 30 keer tot wel 37.000 keer zoeter dan suiker. Ze leveren geen of nauwelijks calorieën, omdat je maar een klein beetje nodig hebt voor de smaak. Niet-intensieve zoetstoffen zijn half zo zoet tot even zoet als suiker. De smaak lijkt erg op die van suiker en ze hebben geen bijsmaak, zoals de meeste intensieve zoetstoffen. De polyolen leveren wel calorieën, maar ongeveer 2 keer zo weinig als suiker: rond de 2,4 kcal per gram (polyolen) ten opzichte van 4 kcal per gram (suiker). Alle zoetstoffen die in voedingsmiddelen gebruikt mogen worden, hebben een E-nummer, wat betekent dat ze goed zijn onderzocht, goedgekeurd zijn en veilig gebruikt kunnen worden. Een voorbeeld van een niet-intensieve zoetstof is Xylitol wat je veel ziet in kauwgom. Een voorbeeld van een intensieve zoetstof is Aspartaam wat veel in frisdranken voorkomt.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/zoetstoffen.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 2,
+            "name": "Cholesterol is altijd slecht voor je.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  2,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  2,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Er zijn twee soorten cholesterol. Het bloed vervoert cholesterol door het aan eiwitten te binden. Deze verbindingen heten lipoproteïnen. Er zijn verschillende soorten lipoproteïnen: HDL (Hoge Dichtheid Lipoproteïne) en LDL (Lage Dichtheid Lipoproteïne): LDL vervoert cholesterol van de lever naar de rest van het lichaam. Een beetje LDL is nodig om bijvoorbeeld beschadigingen in weefsels te herstellen. Maar deze verbindingen kunnen zich ook vastzetten in de binnenwand van bloedvaten. Een teveel aan LDL blijft plakken aan beschadigingen van de vaatwanden. Deze beschadigingen kunnen het gevolg zijn van roken, verhoogde bloeddruk of ouderdom. De bloedvaten slibben daardoor langzaam dicht en het bloed kan er steeds moeilijker doorheen stromen. Dit staat bekend als slagaderverkalking (arteriosclerose). Op deze manier draagt LDL bij aan het ontstaan van hart- en vaatziekten. De verbinding van LDL en cholesterol noemen we LDL-cholesterol. HDL neemt cholesterol uit het bloed weg en voert het af naar de lever, waar het wordt afgebroken. Vervolgens verlaten deze afbraakproducten het lichaam via gal en de ontlasting. Door het afvoeren van cholesterol beschermt HDL het lichaam tegen hart- en vaatziekten. De verbinding van HDL en cholesterol noemen we HDL-cholesterol. Een ezelsbruggetje om te onthouden welk cholesterol beschermt tegen hart- en vaatziekten is: LDL-cholesterol is een Loser en HDL-cholesterol is een Hero.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/cholesterol.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "Iedere dag één ei eten is goed voor je gezondheid.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  3,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  3,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Hierbij hoort wel direct een nuance: eieren bevatten namelijk veel goede voedingsstoffen zoals vitamines, mineralen en eiwitten. Echter, in de eidooier zit ook cholesterol en verzadigd vet. Beide verhogen het cholesterolgehalte van je bloed. En dat verhoogt de kans op hart- en vaatziekten.",
+                    "url": "http://www.voedingscentrum.nl/nl/thema-s/dewaarheidoptafel/eieren/iedere-dag-een-ei-goed-voor-je-gezondheid.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Hoeveel gram eiwit per kilogram lichaamsgewicht per dag moet je binnenkrijgen?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  4,
+                    "name": "0,5",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  4,
+                    "name": "0,8",
+                    "isAnswer": true,
+                    "description": "Een volwassene heeft minimaal 0,8 gram eiwitten per kilogram lichaamsgewicht nodig voor een gezonde leefstijl. Als je minder eet zal je verlies van spieren krijgen en op langere termijn leidt een tekort aan eiwit tot een gebrek aan spierkracht en een verminderde weerstand.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/eiwitten.aspx"
                 },
                 {
                     "id": 3,
-                    "questionId":  1,
-                    "name": "Geen van bovenstaande",
+                    "questionId":  4,
+                    "name": "1,0",
+                    "isAnswer": false
+                },
+                {
+                    "id": 4,
+                    "questionId":  4,
+                    "name": "1,2",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Eiwitten uit vlees zijn beter dan eiwitten uit groente.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  5,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description": "De eiwitten uit vlees lijken meer op de eiwitten die mensen zelf in hun lichaam hebben. Hierdoor worden deze eiwitten beter opgenomen in het lichaam dan de eiwitten uit groente.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/eiwitten.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  5,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 6,
+            "name": "Er zijn voedingsvezels die niet verteerd worden en ongebruikt je lichaam verlaten.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  6,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description": "Deze voedingsvezels heten niet-fermenteerbare voedingsvezels. Deze vezels verlaten onverteerd het lichaam. Ze hebben wel een functie ze zorgen er namelijk voor dat je een voller gevoel krijgt in je buik en dat je poep zachter wordt.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vezels.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  6,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 7,
+            "name": "Van koffie verlies je extra vocht.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  7,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  7,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Elke volwassene heeft zo een 1,5 tot 2 liter vocht per dag nodig. Er wordt vaak gedacht dat dranken met cafeïne vocht ontneemt. Dat is niet waar. Cafeïne stimuleert de de nieren die er voor zorgen dat er sneller vocht het lichaam verlaat. Er verlaat niet méér vocht het lichaam. Dranken met cafeïne leveren ook gewoon vocht aan het lichaam. Energiedrank is niet aangeraden omdat er veel toegevoegde suikers in zitten.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/cafeine.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 8,
+            "name": "Welke vitamines zijn oplosbaar in vet?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  8,
+                    "name": "A, B en C",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  8,
+                    "name": "A, D, E en K",
+                    "isAnswer": true,
+                    "description": "De vetoplosbare vitamines zijn vitamine A, vitamine D, vitamine E en vitamine K. De vetoplosbare vitamines zitten voornamelijk in het vet van voedingsmiddelen en kunnen in de weefsels van het lichaam worden opgeslagen.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vitamines.aspx"
+                },
+                {
+                    "id": 3,
+                    "questionId":  8,
+                    "name": "B1, B2 en B12",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 9,
+            "name": "Een standaardglas wijn bevat meer alcohol dan een standaardglas bier.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  9,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  9,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "In een standaard wijnglas zit 100 ml wijn en in een standaard bierglas zit 250 ml bier. Dit zorgt ervoor dat er evenveel alcohol in een glas wijn zit. Het voedingsadvies luidt. Geen alcohol of niet meer dan 1 glas per dag. Matig alcoholgebruik van 1 glas per dag heeft positieve en negatieve gezondheidseffecten. Meer alcohol drinken heeft alleen maar negatieve effecten. Vanwege deze effecten geldt het advies geen alcohol te drinken of in ieder geval niet meer dan 1 glas per dag. Dit advies is hetzelfde voor mannen en vrouwen.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/alcohol.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 10,
+            "name": "Wat is het bloedsuikergehalte?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  10,
+                    "name": "Het bloedsuikergehalte (bloedglucose) is de hoeveelheid glucose die in het bloed zit op een bepaald moment.",
+                    "isAnswer": true,
+                    "description": "Het lichaam zoekt altijd naar de balans in het glucosegehalte. Het glucosegehalte heet ook wel het bloedsuikergehalte. Al vrij snel na het eten van een maaltijd met koolhydraten begint het bloedsuikergehalte te stijgen. Bij gezonde personen gaat deze stijging door tot ongeveer 1 tot 2 uur na de maaltijd. Daarna neemt het gehalte weer af. Als het bloedsuikergehalte begint te stijgen na het eten, zorgt het hormoon insuline in het bloed ervoor dat de weefsels het glucose snel opnemen. Het bloedsuikergehalte blijft echter niet steeds maar afnemen. Als het bloedsuikergehalte onder een bepaalde grens komt, maakt het lichaam glucagon aan. Hierdoor stijgt het bloedsuikergehalte weer tot het normale niveau. Bij gezonde personen is de bloedsuikerwaarde  ongeveer 3 uur na de maaltijd het laagst. Met de glycemische index (GI) kun je schatten hoe snel de bloedsuikerspiegel stijgt als iemand koolhydraten eet.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/glucose.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  10,
+                    "name": "Het bloedsuikergehalte is de hoeveelheid glucose die het bloed opneemt vanuit een bepaalde voedingsstof.",
+                    "isAnswer": false
+                },
+                {
+                    "id": 3,
+                    "questionId":  10,
+                    "name": "Het bloedsuikergehalte bepaald hoeveel er van de suiker in een specifiek product wordt opgenomen in je bloed.",
                     "isAnswer": false
                 }
             ],

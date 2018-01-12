@@ -1,6 +1,6 @@
 {
     "id": 1,
-    "name": "Starten in de wereld van voeding quiz",
+    "name": "Starten in de wereld van voeding",
     "description": "Deze quiz gaat over algemene feiten over voeding",
     "questions": [
         {
@@ -19,7 +19,7 @@
                     "questionId":  1,
                     "name": "Nee",
                     "isAnswer": true,
-                    "description": "Dat klopt! Suikers, zetmeel en vezels zijn vormen van koolhydraten in onze voeding. Suikers en zetmeel zijn koolhydraten die een belangrijke bron van energie zijn voor het lichaam. De Gezondheidsraad adviseert dat wie gezond wil eten, 40 tot 70% van zijn energie uit koolhydraten haalt. Koolhydraten kunnen het beste gegeten worden in de vorm van voedingsmiddelen waarvan is aangetoond dat ze gezondheidswinst leveren of andere goede voedingsstoffen bevatten. Goede bronnen zijn vooral volkoren graanproducten zoals volkorenbrood en volkoren pasta, aardappels, peulvruchten, groente en fruit. Koolhydraatrijke producten die arm zijn aan voedingsstoffen, zoals frisdrank, koek en snoep, kunnen beter in beperkte mate worden genomen.",
+                    "description": "Suikers, zetmeel en vezels zijn vormen van koolhydraten in onze voeding. Suikers en zetmeel zijn koolhydraten die een belangrijke bron van energie zijn voor het lichaam. De Gezondheidsraad adviseert dat wie gezond wil eten, 40 tot 70% van zijn energie uit koolhydraten haalt. Koolhydraten kunnen het beste gegeten worden in de vorm van voedingsmiddelen waarvan is aangetoond dat ze gezondheidswinst leveren of andere goede voedingsstoffen bevatten. Goede bronnen zijn vooral volkoren graanproducten zoals volkorenbrood en volkoren pasta, aardappels, peulvruchten, groente en fruit. Koolhydraatrijke producten die arm zijn aan voedingsstoffen, zoals frisdrank, koek en snoep, kunnen beter in beperkte mate worden genomen.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/koolhydraten.aspx"
                 }
             ],
@@ -38,7 +38,7 @@
                     "questionId": 2,
                     "name": "Ja",
                     "isAnswer": true,
-                    "description": "Goed gekozen! Vaak denken mensen dat vetten slecht zijn. Maar vetten leveren energie voor het lichaam en worden dan ook verteerd door het lichaam. Er is echter wel een verschil in vetten. Verzadigd vet vergroot de kans op hart- en vaatziekten. Verzadigd vet kan namelijk het cholesterolgehalte in je bloed laten stijgen en daardoor kunnen je bloedvaten verstopt raken. Kies vooral producten met weinig verzadigd vet en vervang ze door producten met onverzadigd vet. Hoe minder verzadigd vet je eet, hoe beter. Vaak kun je op het etiket van een product zien hoeveel verzadigd vet erin zit. Lees daarom het etiket als je boodschappen doet en vergelijk de hoeveelheid verzadigd vet.",
+                    "description": "Vaak denken mensen dat vetten slecht zijn. Maar vetten leveren energie voor het lichaam en worden dan ook verteerd door het lichaam. Er is echter wel een verschil in vetten. Verzadigd vet vergroot de kans op hart- en vaatziekten. Verzadigd vet kan namelijk het cholesterolgehalte in je bloed laten stijgen en daardoor kunnen je bloedvaten verstopt raken. Kies vooral producten met weinig verzadigd vet en vervang ze door producten met onverzadigd vet. Hoe minder verzadigd vet je eet, hoe beter. Vaak kun je op het etiket van een product zien hoeveel verzadigd vet erin zit. Lees daarom het etiket als je boodschappen doet en vergelijk de hoeveelheid verzadigd vet.",
                     "url": "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/welke-vetten-zijn-ongezond-.aspx"
                 },
                 {
@@ -57,7 +57,7 @@
 
         {
             "id": 3,
-            "name": "Als je ‘s avond na 19:00 eet, wordt je dik?",
+            "name": "Als je ‘s avond na 20:00 eet, wordt je dik?",
             "questionTypeId": 1,
             "options": [
                 {
@@ -71,7 +71,7 @@
                     "questionId": 3,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Het maakt niet uit op welk moment van de dag je eet en drinkt. Je kunt dus ook na 7 uur 's avonds iets eten. Het gaat erom hoeveel calorieën je in totaal op een dag binnenkrijgt door eten en hoeveel calorieën je verbruikt door bijvoorbeeld beweging. Dit noemen we de energiebalans. Wat je meer eet dan je verbrandt, sla je op als vet.",
+                    "description": "Het maakt niet uit op welk moment van de dag je eet en drinkt. Je kunt dus ook na 8 uur 's avonds iets eten. Het gaat erom hoeveel calorieën je in totaal op een dag binnenkrijgt door eten en hoeveel calorieën je verbruikt door bijvoorbeeld beweging. Dit noemen we de energiebalans. Wat je meer eet dan je verbrandt, sla je op als vet.",
                     "url": "https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/afvallen-en-gewicht/kom-je-aan-van-eten-na-8-uur.aspx"
                 }
             ],
@@ -121,7 +121,7 @@
                 {
                     "id": 2,
                     "questionId": 5,
-                    "name": "Nee",
+                    "name": "Onjuist",
                     "isAnswer": true,
                     "description": "Er zijn ruwweg twee soorten vet. Verzadigde vetten verhogen het ongunstige cholesterol in je bloed. Daarmee neemt de kans op hart- en vaatziekten toe. Het is beter om producten met verzadigd vet te vervangen voor producten met onverzadigd vet. Neem daarom de zachte soorten vet, zoals halvarine voor op brood en gebruik voor de bereiding van maaltijden olie of vloeibaar bak- en braadvet uit een knijpfles. Daar zitten meer onverzadigde vetten in. Kies daarnaast zo min mogelijk voor vet vlees, volle zuivel, koek, gebak en snacks. Hier zit veel 'verborgen vet' in. Vervang deze producten door producten met veel onverzadigde vetten zoals vette vis, noten en avocado.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
@@ -149,7 +149,7 @@
                     "questionId": 6,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Zoals alle voedingsmiddelen levert brood calorieën. En wanneer je over lange tijd meer calorieën binnenkrijgt dan je verbrandt, kom je aan in gewicht. Maar dat heeft niet specifiek iets te maken met brood. Waar de brandstof vandaan komt, uit koolhydraten, vet of eiwit, maakt niet uit.",
+                    "description": "Zoals alle voedingsmiddelen levert brood calorieën. En wanneer je over lange tijd meer calorieën binnenkrijgt dan je verbrandt, kom je aan in gewicht. Maar dat heeft niet specifiek iets te maken met brood. Waar de brandstof vandaan komt, uit koolhydraten, vet of eiwit, maakt niet uit. Brood is juist heel gezond het bevat veel vezels en mineralen zoals jodium die je lichaam nodig heeft.",
                     "url": "http://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/is-brood-een-dikmaker2.aspx"
                 }
             ],
@@ -181,7 +181,7 @@
                   "questionId": 7,
                   "name": "Coca-Cola light, Sinaasappelsap, Coca-Cola regular",
                   "isAnswer": true,
-                  "description": "Top!  Per 100ml zit er Coca-Cola light: 0g, Sinaasappelsap: 8g en Coca-Cola regular: 10.6g. Zoals je ziet bevat sinaasappelsap bijna evenveel suiker als Coca-Cola regular.",
+                  "description": "Per 100ml zit er Coca-Cola light: 0g, Sinaasappelsap: 8g en Coca-Cola regular: 10.6g. Zoals je ziet bevat sinaasappelsap bijna evenveel suiker als Coca-Cola regular.",
                   "url": "http://www.voedingscentrum.nl/encyclopedie/suiker.aspx"
               },
               {
@@ -199,22 +199,74 @@
         },
         {
             "id": 8,
-            "name": "Van koffie verlies je extra vocht.",
+            "name": "Chocolade bevat cafeïne",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId": 8,
                     "name": "Waar",
-                    "isAnswer": false
+                    "isAnswer": true,
+                    "description": "Chocolade bevat cafeïne, maar niet zoveel als koffie en energiedrankjes. Chocolademelk bevat 2 milligram cafeïne per 100 gram, melkchocolade 40 milligram  en pure chocolade 40 milligram. Gezonde volwassenen kunnen ongeveer 400 milligram cafeïne per dag innemen zonder dat er negatieve effecten te verwachten zijn.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/chocolade.aspx"
                 },
                 {
                     "id": 2,
                     "questionId": 8,
                     "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 9,
+            "name": "Het eeuwenoude verhaaltje luidt: “Vitamine A is goed voor je ogen”. Is dit waar of niet?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 9,
+                    "name": "Waar",
                     "isAnswer": true,
-                    "description": "Elke volwassene heeft zo een 1,5 tot 2 liter vocht per dag nodig. Er wordt vaak gedacht dat dranken met cafeïne vocht ontneemt. Dat is niet waar. Cafeïne stimuleert de de nieren die er voor zorgen dat er sneller vocht het lichaam verlaat. Er verlaat niet méér vocht het lichaam. Dranken met cafeïne leveren ook gewoon vocht aan het lichaam. Energiedrank ik niet aangeraden omdat er veel toegevoegde suikers in zitten.",
-                    "url": "http://www.voedingscentrum.nl/encyclopedie/cafeine.aspx"
+                    "description": "Vitamine A is zeker goed voor de ogen, maar ook de huid. Vitamine A is nodig voor de aanmaak van cellen en de weefselstructuur van de huid en door vitamine A kunnen de ogen zich aanpassen aan het schemer.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vitamine-a.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId": 9,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 10,
+            "name": "Zwarte koffie valt helaas buiten de Schijf van Vijf.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 10,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 10,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description": "Zwarte koffie en koffie verkeerd staat in de Schijf van Vijf! In principe is koffie zonder suiker niet slecht. Maar de cafeïne die er in zit, daar zit een advies limiet aan. Namelijk 400 milligram cafeïne per dag, dan komt neer op ongeveer 4 kopjes koffie per dag.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/koffie.aspx"
                 }
             ],
             "questionType": {

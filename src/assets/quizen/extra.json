@@ -5,26 +5,286 @@
     "questions": [
         {
             "id": 1,
-            "name": "Lorum",
+            "name": "Wat zijn E-nummers?",
             "questionTypeId": 1,
             "options": [
                 {
                     "id": 1,
                     "questionId":  1,
-                    "name": "Lorum",
+                    "name": "E-nummers zijn synthetische rest-stoffen dat ervoor zorgt dat wij er meer van eten.",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
                     "questionId":  1,
-                    "name": "Lorum",
-                    "isAnswer": true
+                    "name": "E-nummers zijn soms giftige stoffen die onzorgvuldig door de fabriek toegevoegd zijn zodat het eten mooier wordt.",
+                    "isAnswer": false
                 },
                 {
                     "id": 3,
                     "questionId":  1,
-                    "name": "Lorum",
+                    "name": "E-nummers zijn goedgekeurde stoffen die de eigenschappen van voedingsmiddelen verbeteren.",
+                    "isAnswer": true,
+                    "description": "Een stof krijgt niet zomaar een E-nummer, hier gaat een heel traject aan vooraf. Het belangrijkste is dat de stof niet schadelijk mag zijn voor de gezondheid. Het E-nummer is dus een garantie dat de Europese autoriteit voor voedselveiligheid (EFSA) de stoffen gecontroleerd heeft en dat ze veilig gebruikt kunnen worden. In de wet staat in welke producten een toevoeging gebruikt mag worden en hoeveel er maximaal aan producten mag worden toegevoegd.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/e-nummers.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 2,
+            "name": "Hoe lang kan je leven zonder vocht in te nemen?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  2,
+                    "name": "1-2 dagen",
                     "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  2,
+                    "name": "3-5 dagen",
+                    "isAnswer": true,
+                    "description":"Een gemiddeld gezond mens kan ongeveer 3 tot 5 dagen zonder enkel vocht in te nemen. Dit toont aan hoe belangrijk vochtinname is. De beste dranken om te drinken zijn water en thee.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/trefwoord/vocht.aspx"
+                },
+                {
+                    "id": 3,
+                    "questionId":  2,
+                    "name": "6-8 dagen",
+                    "isAnswer": false
+                },
+                {
+                    "id": 4,
+                    "questionId":  2,
+                    "name": "9-10 dagen",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 3,
+            "name": "Als je eten dat op de grond valt, binnen 5 seconden opraapt, dan kun je het nog opeten.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId": 3,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId": 3,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description":"Ook voedsel dat korter dan 5 seconden op de vloer heeft gelegen kan besmet raken met ziekmakende bacteriën.",
+                    "url": "http://www.voedingscentrum.nl/nl/thema-s/dewaarheidoptafel/minder-verspillen/eten-binnen-5-seconden-opgeraapt-nog-eetbaar.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 4,
+            "name": "Als er een deuk zit in een blik groente, is de inhoud niet meer veilig.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  4,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  4,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description":"Als de kunststof beschermlaag nog heel is, bederft het product niet. Vandaag de dag worden blikken aan de binnenkant voorzien van een kunststof laag. Deze zorgt ervoor dat stoffen zoals tin vanuit het blik niet in het product terecht kunnen komen. Bij lichte deuken of butsen blijft deze laag heel. Alleen bij erg beschadigde blikken kan de laag beschadigd raken, met aantasting van het product tot gevolg.",
+                    "url": "http://www.voedingscentrum.nl/nl/thema-s/dewaarheidoptafel/vers/als-er-een-deuk-zit-in-een-blik-groente-is-de-inhoud-volgens-mij-niet-meer-veilig.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 5,
+            "name": "Het Voedingscentrum wordt gefinancierd door de levensmiddelenindustrie.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  5,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  5,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description":"Het voedingscentrum is een onafhankelijke organisatie van de overheid die als doel heeft de inwoners van Nederland meer informatie te geven over gezonde voeding. De Schijf van Vijf is bedacht door het voedingscentrum.",
+                    "url": "http://www.voedingscentrum.nl/nl/service/over-ons.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 6,
+            "name": "Een gezond persoon heeft geen behoefte aan extra probiotica door middel van bijvoorbeeld Yakult.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  6,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description":"Er is nog onvoldoende wetenschappelijk bewijs voor de werking van probiotica zoals Yakult. Bij een gezond persoon zal het daarom geen werking hebben.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/probiotica.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  6,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 7,
+            "name": "Als je een paar dagen voor een wedstrijd meer koolhydraten gaat eten zul je tijdens de wedstrijd meer kracht hebben.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  7,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description":"Als je meer koolhydraten eet zal je de hoeveelheid glycogeen stijgen. Glycogeen is de belangrijkste brandstof bij zeer intensieve inspanningen.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/glucose.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  7,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 8,
+            "name": "Light frisdranken zijn beter voor je tanden dan gewone frisdranken.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  8,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  8,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description":"Light frisdrank heeft net als gewone frisdrank een hoge zuurgraad waardoor het ook slecht is voor je tanden. In light frisdranken zit meestal minder of geen suiker. Het etiket Light-frisdrank betekent minimaal 30% minder calorieën dan gemiddeld, maar vaak zitten er helemaal geen calorieën in.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/frisdrank.aspx"
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 9,
+            "name": "Wat gebeurt er met je bloedsuikergehalte als je wit brood eet?",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  9,
+                    "name": "De waardes van je bloedsuiker gaan geleidelijk omhoog.",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  9,
+                    "name": "De waardes van je bloedsuiker gaan snel omhoog.",
+                    "isAnswer": true,
+                    "description":"Witbrood heeft een hoge glycemische index. Dit betekent dat je bloedsuikergehalte snel omhoog gaat. Witbrood valt onder de snelle koolhydraten en wordt snel opgenomen door jouw lichaam. Een te hoge bloedsuikerspiegel is slecht voor je gezondheid. Zo kan het schade opleveren aan je aders, verhoogt het de kans op chronische ziekte en kan je er overgewicht van krijgen. We raden daarom volkorenbrood aan in plaats van wit brood.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/glycemische-index.aspx"
+                },
+                {
+                    "id": 3,
+                    "questionId":  9,
+                    "name": "De waardes van je bloedsuiker gaan geleidelijk omlaag.",
+                    "isAnswer": false
+                },
+                {
+                    "id": 4,
+                    "questionId":  9,
+                    "name": "De waardes van je bloedsuiker gaan snel omlaag.",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 10,
+            "name": "Fruitsuikers in een appel zijn gezonder dan toegevoegde suikers.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  10,
+                    "name": "Waar",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  10,
+                    "name": "Niet waar",
+                    "isAnswer": true,
+                    "description":"Er is geen 'gezonde' suiker. Het lichaam maakt geen onderscheid tussen van nature aanwezige of toegevoegde suikers. In fruit zitten suikers, maar ook belangrijke voedingsstoffen, zoals vezels en vitamine C. Fruit is goed voor de gezondheid en hangt samen met een lager risico op hart- en vaatziekten. Daarnaast hangt het eten van fruit samen met een lager risico op diabetes type 2, darmkanker en longkanker. Fruit is dus gezonder dan zoete snacks die wel suikers, maar verder weinig nuttige voedingsstoffen bevatten. Daarom ook is het advies om 2 porties fruit (200 gram) per dag te eten. In fruit zitten fruitsuikers. Toegevoegde suikers zijn suikers die fabrikanten toevoegen aan producten, of die je zelf toevoegt, bijvoorbeeld suiker of honing in je thee of yoghurt.",
+                    "url": "http://www.voedingscentrum.nl/nl/thema-s/dewaarheidoptafel/zoet/zijn-fruitsuikers-gezonder-dan-toegevoegde-suikers.aspx"
                 }
             ],
             "questionType": {

@@ -1,6 +1,6 @@
 {
     "id": 2,
-    "name": "Medium quiz",
+    "name": "Voeding quiz niveau #2",
     "description": "Deze quiz bevat medium vragen",
     "questions": [
         {
@@ -13,7 +13,7 @@
                     "questionId":  1,
                     "name": "Waar",
                     "isAnswer": true,
-                    "description": "Verzadigd vet en onverzadigd vet bevatten allebei 9 kcal per gram vet. Wel is onverzadigd vet goed voor het lichaam, omdat het je organen beschermt en het een belangrijke energiebron is van je lichaam. Probeer de inname van verzadigd vet zo laag mogelijk te houden dan verklein je de kans op hart en vaatziekten.",
+                    "description": "Verzadigd vet en onverzadigd vet bevatten allebei 9 kcal per gram vet. Wel is vet goed voor het lichaam, omdat het je organen beschermt en het een belangrijke energiebron is van je lichaam. Probeer de inname van verzadigd vet zo laag mogelijk te houden dan verklein je de kans op hart en vaatziekten.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
                 },
                 {
@@ -45,7 +45,7 @@
                     "questionId":  2,
                     "name": "Avocado",
                     "isAnswer": true,
-                    "description": "Een avocado bevat 19,5g vet terwijl roomijs maar 11g vet bevat. Wel is het zo dat een avocado een stuk gezonder is voor je dan een bak roomijs. Roomijs heeft 7g verzadigd vet terwijl een avocado maar 2g verzadigd vet heeft.",
+                    "description": "Een avocado bevat 19,5g vet terwijl roomijs maar 11g vet bevat. Wel is het zo dat een avocado een stuk gezonder is voor je dan een bak roomijs. Roomijs heeft 7g verzadigd vet terwijl een avocado maar 2g verzadigd vet heeft. Een avocado bevat naast goede vetten ook heel veel vitaminen en mineralen die je lichaam nodig heeft, zoals vitamine A en Calcium.",
                     "url": "http://nevo-online.rivm.nl"
                 }
             ],
@@ -71,7 +71,7 @@
                     "questionId":  3,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Als er 'light' op een product staat dan heeft het vergeleken met het gewone product minimaal 30% minder energie (kcal), vet of suikers. Het staat op de verpakking waarvan er minder inzit. Wanneer er minder vet in en product zit is dit vaak vervangen door koolhydraten en eiwitten die ook energie bevatten. Het product bevat dan misschien meer calorieën dan je zou verwachten. Bij zoete light-producten, zoals light-frisdranken, is (een deel van) de suiker vervangen door zoetstoffen.",
+                    "description": "Als er 'light' op een product staat dan heeft het vergeleken met het gewone product minimaal 30% minder energie (kcal), vet of suikers. Het staat op de verpakking waarvan er minder inzit. Wanneer er minder vet in en product zit is dit vaak vervangen door koolhydraten en eiwitten die ook energie bevatten. Het product bevat dan misschien meer calorieën dan je zou verwachten. Bij zoete light-producten, zoals light-frisdranken, is (een deel van) de suiker vervangen door zoetstoffen. Hierbij is er dan wel minder kcal, omdat zoetstoffen minder kcal zijn dan suiker.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/light2.aspx"
                 }
             ],
@@ -97,7 +97,7 @@
                     "questionId":  4,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Correct! Niet al het bruine brood is gezond omdat soms wit brood bruin gemaakt wordt. Zie hier een leuk filmpje van de keuringsdienst van waarde.",
+                    "description": "Niet al het bruine brood is gezond omdat soms wit brood bruin gemaakt wordt. Zie hier een leuk filmpje van de keuringsdienst van waarde.",
                     "url": "https://www.npo3.nl/kvw-kort-brood/20-11-2017/WO_KN_11738522"
                 }
             ],
@@ -109,7 +109,7 @@
         },
         {
             "id": 5,
-            "name": "Roomboter is ongezonder dan Margarine.",
+            "name": "Een kuipje margarine past beter bij gezonde voeding dan harde roomboter.",
             "questionTypeId": 1,
             "options": [
                 {
@@ -117,7 +117,7 @@
                     "questionId":  5,
                     "name": "Waar",
                     "isAnswer": true,
-                    "description": "Margarine bevat minder kcal dan roomboter en minder verzadigde vetten. De andere voedingsstoffen in margarine en roomboter zijn in zulke kleine maten dat ze te verwaarlozen zijn.",
+                    "description": "Margarine bevat minder verzadigde vet dan roomboter. De andere voedingsstoffen in margarine en roomboter zijn in zulke kleine maten dat ze te verwaarlozen zijn. Let erop dat zachte boter vaak minder verzadigd vet heeft dan harde boter.",
                     "url": "http://nevo-online.rivm.nl"
                 },
                 {
@@ -135,7 +135,7 @@
         },
         {
             "id": 6,
-            "name": "Het is beter om te koken in bijvoorbeeld kokosvet dan olijfolie.",
+            "name": "Het is beter om te koken in kokosvet dan olijfolie.",
             "questionTypeId": 1,
             "options": [
                 {
@@ -149,7 +149,7 @@
                     "questionId":  6,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "Kokos komt van de kokosnoot. Kokosvet bevat het meeste verzadigd vet van alle vet- en olie soorten. Kokosvet wordt vaak kokosolie genoemd. Verzadigd vet staat erom bekend niet goed te zijn voor de gezondheid. Het verhoogt het risico op hart- en vaatziekten. Het is dan ook het advies om kokosproducten en kokosvet alleen bij uitzondering te eten. Door de aanleg van kokosplantages worden mogelijk bossen gekapt. Verder worden er bij de teelt bestrijdingsmiddelen gebruikt en is er veel water nodig.",
+                    "description": "Kokos komt van de kokosnoot. Kokosvet bevat het meeste verzadigd vet van alle vet- en olie soorten. Kokosvet wordt vaak kokosolie genoemd. Verzadigd vet staat erom bekend niet goed te zijn voor de gezondheid. Het verhoogt het risico op hart- en vaatziekten. Het is dan ook het advies om kokosproducten en kokosvet alleen bij uitzondering te eten.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/kokos-en-kokosvet.aspx"
                 }
             ],
@@ -161,7 +161,7 @@
         },
         {
             "id": 7,
-            "name": "Je kunt beter geen aardappels of pasta eten. Dit zijn namelijk dikmakers.",
+            "name": "Je kunt beter geen aardappels eten. Aardappels zijn namelijk dikmakers.",
             "questionTypeId": 1,
             "options": [
                 {
@@ -175,7 +175,7 @@
                     "questionId":  7,
                     "name": "Niet waar",
                     "isAnswer": true,
-                    "description": "De koolhydraten die in aardappels en pasta zitten zijn noodzakelijk voor het menselijk lichaam als je bijna geen koolhydraten eet zal je lichaam eiwitten gaan gebruiken voor energie waardoor je een eiwittekort kan krijgen, of je krijgt al je energie binnen via vetten waardoor je juist dikker wordt dan als je wel pasta en aardappels zou eten.",
+                    "description": "De koolhydraten die in aardappels zitten zijn noodzakelijk voor het menselijk lichaam. Als je bijna geen koolhydraten eet zal je lichaam eiwitten gaan gebruiken voor energie waardoor je een eiwittekort kan krijgen, of je krijgt al je energie binnen via vetten waardoor je juist dikker wordt dan als je wel aardappels zou eten. Naast koolhydraten bevatten aardappels ook andere goede stoffen, zoals kalium, vitamine B6 en vezels. Als je aardappels vergelijkt met andere voedingsmiddelen met veel koolhydraten zoals pasta kun je zien dat aardappels gezonder zijn, omdat ze meer vitaminen en mineralen bevatten.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/koolhydraten.aspx"
                 }
             ],
@@ -201,7 +201,7 @@
                     "questionId":  8,
                     "name": "2-4",
                     "isAnswer": true,
-                    "description": "Koffie zonder suiker past in een gezond eetpatroon met de Schijf van Vijf. Alleen kookkoffie en koffie gezet met een cafetière staan niet in de Schijf van Vijf omdat er veel cafestol in zit. Dat is een stof die het LDL-cholesterol verhoogt en daarom niet goed is voor de bloedvaten. Vanwege het cafestol geldt ook het advies niet meer dan 2 tot 3 kopjes espresso of koffie van cups te drinken. Verder gelden er beperkingen vanwege cafeïne in koffie. Gezonde volwassenen kunnen ongeveer 400 milligram cafeïne per dag innemen zonder dat er negatieve effecten te verwachten zijn. Dat komt neer op ongeveer 4 kopjes koffie per dag.",
+                    "description": "Koffie zonder suiker past in een gezond eetpatroon met de Schijf van Vijf. Alleen kookkoffie en koffie gezet met een cafetière staan niet in de Schijf van Vijf omdat er veel cafestol in zit. Dat is een stof die het LDL-cholesterol verhoogt en daarom niet goed is voor de bloedvaten. Vanwege het cafestol geldt ook het advies niet meer dan 2 tot 3 kopjes espresso of koffie van cups te drinken. Verder gelden er beperkingen vanwege cafeïne in koffie. Gezonde volwassenen kunnen ongeveer 400 milligram cafeïne per dag innemen zonder dat er negatieve effecten te verwachten zijn. Dat komt neer op ongeveer 4 kopjes koffie per dag. Als je teveel koffie per dag drinkt kan je als alternatief thee of water drinken.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/koffie.aspx"
                 },
                 {
@@ -214,6 +214,58 @@
                     "id": 4,
                     "questionId":  8,
                     "name": "Er is geen limiet",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 9,
+            "name": "Koffie is goed voor hart en bloedvaten.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  9,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description": "Een gebruik van 2 tot 4 koppen koffie per dag hangt samen met een ongeveer 10% lager risico op hartziekten. Ook is aangetoond dat een gebruik van 2 tot 4 koppen koffie per dag samenhangt met een ongeveer 10% lager risico op een beroerte. Daarnaast is er sterk bewijs dat het gebruik van 5 koppen koffie per dag in vergelijking tot geen koffie gebruik samenhangt met een 30% lager risico op diabetes type 2. Het verband is vergelijkbaar voor koffie met cafeïne en decaf.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/koffie.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  9,
+                    "name": "Niet waar",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        },
+        {
+            "id": 10,
+            "name": "Ei is cholesterol verhogend.",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  10,
+                    "name": "Waar",
+                    "isAnswer": true,
+                    "description": "Eieren zijn rijk aan cholesterol. Producten met cholesterol verhogen het risico op voor hart- en vaatziekten iets. Ook verhoogt de kans op diabetes type 2 iets als je veel eieren eet. Bij een gezonde voeding kan je 2-3 eieren per week eten, als vegetariër kan dit 3-4 zijn.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/eieren.aspx"
+                },
+                {
+                    "id": 2,
+                    "questionId":  10,
+                    "name": "Niet waar",
                     "isAnswer": false
                 }
             ],
