@@ -8,7 +8,7 @@ import {AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable} f
 export class AuthService {
 
     private dbPath: string = '/users';
-    userObservable: FirebaseObjectObservable<User> = null;
+    userObservable: FirebaseListObservable<any> = null;
     userObservables: FirebaseListObservable<User[]> = null;
 
     user: User = null;
@@ -63,12 +63,19 @@ export class AuthService {
     }
 
     getUserByUID(key: string): void {
-      this.userObservable = this.db.object(`${this.dbPath}/${key}`);
-      this.userObservable.subscribe(ga => {
+      this.userObservable = this.db.list('users', {
+        query: {
+          orderByChild: 'uid',
+          equalTo: key
+        }
+      });
+      this.userObservable.subscribe(myUser => {
+        console.log(key);
+        console.log(myUser);
         this.user = {
-          'uid': ga.uid,
-          'displayName': ga.displayName,
-          'email': ga.email,
+          'uid': myUser[0].uid,
+          'displayName': myUser[0].displayName,
+          'email': myUser[0].email,
         }
       });
     }
