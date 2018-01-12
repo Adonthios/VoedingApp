@@ -10,11 +10,40 @@ export class QuizService {
   private dbPath: string = '/quizResults';
   quizResult: FirebaseObjectObservable<QuizResult> = null;
   quizResults: FirebaseListObservable<QuizResult[]> = null;
+  filteredQuizResults: FirebaseListObservable<QuizResult[]> = null;
+
+  returnList: QuizResult[] = [];
 
   constructor(private db: AngularFireDatabase, private http: Http) {
     this.quizResults = db.list('quizResults');
   }
 
+  getQuizResultsByID(key: number): void {
+    this.returnList = [];
+    this.filteredQuizResults = this.db.list('quizResults', {
+      query: {
+        orderByChild: 'quizid',
+        equalTo: key
+      }
+    });
+
+    this.filteredQuizResults.subscribe(quizResults => {
+      quizResults.forEach(qr => {
+        var temp: QuizResult = {
+          '$key' : "",
+          'uid': qr.uid,
+          'email' : qr.email,
+          'quizid' : key,
+          'correctFirstTime': qr.correctFirstTime
+        };
+        this.returnList.push(temp);
+      });
+    });
+  }
+
+  getReturnList() {
+    return this.returnList;
+  }
 
    getQuizResult(key: string): FirebaseObjectObservable<QuizResult> {
      this.quizResult = this.db.object(`${this.dbPath}/${key}`);

@@ -1,8 +1,26 @@
 <div class="row">
    <h1>Ranglijst</h1>
 
-   <div class="container mat-elevation-z8">
-     // Hier die data
+   <div class="container">
+     <p>Zie hieronder de ranglijsten van de quizzen</p>
+     <mat-tab-group>
+      <mat-tab label="Easy">
+        <ul>
+          <li *ngFor="let result of quizResultListOne">{{result.email}} - {{result.correctFirstTime}}</li>
+        </ul>
+      </mat-tab>
 
+      <mat-tab label="Medium">
+
+      </mat-tab>
+
+      <mat-tab label="Hard">
+
+      </mat-tab>
+
+      <mat-tab label="Extra">
+
+      </mat-tab>
+    </mat-tab-group>
    </div>
  </div>

@@ -30,6 +30,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatIconModule,
     MatProgressBarModule,
     MatCardModule,
+    MatTabsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule // for database
   ],
