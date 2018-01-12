@@ -50,7 +50,7 @@ hr {
 
 .answer.good, .answer-description.good {
   display: block;
-  background-color: #aaeeaa;
+  background-color: #45d045;
   font-size: 20px;
   padding: 10px;
   margin: 3px;
@@ -58,7 +58,7 @@ hr {
 
 .answer.wrong, .answer-description.wrong {
   display: block;
-  background-color: #EF5350;
+  background-color: #e6312e;
   font-size: 20px;
   padding: 10px;
   margin: 3px;
@@ -66,7 +66,7 @@ hr {
 
 .answer-url {
   display: block;
-  background-color: #fff7be;
+  background-color: #dadada;
   font-size: 20px;
   padding: 10px;
   margin: 3px;

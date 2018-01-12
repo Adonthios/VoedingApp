@@ -56,9 +56,10 @@ export class QuizService {
 
   getAll() {
     return [
-      { id: 'assets/quizen/startenmetvoeding.json', name: 'Starten met voeding' },
-      { id: 'assets/quizen/gemiddeldevoeding.json', name: 'Gemiddelde voeding vragen' },
-      { id: 'assets/quizen/moeilijkevoeding.json', name: 'Moeilijke voeding vragen' }
+      { id: 'assets/quizen/easy.json', name: 'Voeding quiz niveau #1' },
+      { id: 'assets/quizen/medium.json', name: 'Voeding quiz niveau #2' },
+      { id: 'assets/quizen/hard.json', name: 'Voeding quiz niveau #3' },
+      { id: 'assets/quizen/extra.json', name: 'Extra vragen en weetjes' }
     ];
   }
 }

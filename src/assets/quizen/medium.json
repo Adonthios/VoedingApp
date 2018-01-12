@@ -12,15 +12,15 @@
                     "id": 1,
                     "questionId":  1,
                     "name": "Waar",
-                    "isAnswer": true
+                    "isAnswer": true,
+                    "description": "Verzadigd vet en onverzadigd vet bevatten allebei 9 kcal per gram vet. Wel is onverzadigd vet goed voor het lichaam, omdat het je organen beschermt en het een belangrijke energiebron is van je lichaam. Probeer de inname van verzadigd vet zo laag mogelijk te houden dan verklein je de kans op hart en vaatziekten.",
+                    "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
                 },
                 {
                     "id": 2,
                     "questionId":  1,
                     "name": "Niet waar",
-                    "isAnswer": false,
-                    "description": "Verzadigd vet en onverzadigd vet bevatten allebei 9 kcal per gram vet. Wel is onverzadigd vet goed voor het lichaam, omdat het je organen beschermt en het een belangrijke energiebron is van je lichaam. Probeer de inname van verzadigd vet zo laag mogelijk te houden dan verklein je de kans op hart en vaatziekten.",
-                    "url": "http://www.voedingscentrum.nl/encyclopedie/vetten.aspx"
+                    "isAnswer": false
                 }
             ],
             "questionType": {

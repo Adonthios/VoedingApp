@@ -1,0 +1,8 @@
+.correctanswer {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.descriptionanswer {
+  font-style: italic;
+}

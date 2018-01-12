@@ -11,7 +11,8 @@
         <span>Ranglijst</span>
       </button>
       <button (click)="logout()" mat-menu-item>
-        Uitloggen: {{ authService.currentUserName }}
+        <mat-icon>exit_to_app</mat-icon>
+        Uitloggen {{ authService.currentUserName }}
       </button>
     </mat-menu>
   </span>
@@ -31,14 +32,16 @@
 <ranklist *ngIf="show=='list'"></ranklist>
 
 <div *ngIf="show=='quiz'" class="row">
-  <h1>Quiz</h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <div *ngIf="state=='quizLoading'" class="container">
+    <h1>Quiz</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
 
   <div *ngIf="state=='quizLoading'" class="col-md-6 text-sm-right">
     <mat-list role="list">
-      <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon> {{quiz.name}}</mat-list-item>
+      <mat-list-item role="listitem" *ngFor="let quiz of quizes" (click)="loadQuiz(quiz.id)"><mat-icon>extension</mat-icon>  {{quiz.name}}</mat-list-item>
     </mat-list>
   </div>
 
@@ -88,14 +91,20 @@
     <div *ngFor="let question of quiz.questions; let index = index">
       <div class="result-question answer {{ isCorrect(question) == 'Goed'? 'good': 'wrong'}}">
         <h4>{{index + 1}}. {{question.name}}</h4>
+        <h4 class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Jouw antwoord is {{ isCorrect(question) == 'Goed'? 'goed': 'fout'}}.</h4>
+
         <div class="row">
           <div class="col-md-6" *ngFor="let Option of question.options">
-            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" /> {{Option.name}}
+            <input id="{{Option.id}}" type="checkbox" disabled="disabled" [(ngModel)]="Option.selected" />
+
+
+            <span *ngIf="Option.isAnswer == true" class="correctanswer">{{Option.name}}</span>
+            <span *ngIf="Option.isAnswer != true">{{Option.name}}</span>
+            <span *ngIf="Option.isAnswer == true" class="descriptionanswer"><br> {{ Option.description }} <br></span>
+
           </div>
         </div>
-        <div class="alert {{ isCorrect(question) == 'correct'? 'alert-success': 'alert-danger'}}">Jouw antwoord is {{ isCorrect(question) == 'Goed'? 'goed': 'fout'}}.</div>
       </div>
     </div>
-    <h4 class="alert alert-info text-sm-center">Bedankt voor het invullen!</h4>
   </div>
 </div>

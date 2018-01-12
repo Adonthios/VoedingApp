@@ -1,0 +1,37 @@
+{
+    "id": 4,
+    "name": "Extra vragen en weetjes",
+    "description": "Allemaal leuke informatie",
+    "questions": [
+        {
+            "id": 1,
+            "name": "Lorum",
+            "questionTypeId": 1,
+            "options": [
+                {
+                    "id": 1,
+                    "questionId":  1,
+                    "name": "Lorum",
+                    "isAnswer": false
+                },
+                {
+                    "id": 2,
+                    "questionId":  1,
+                    "name": "Lorum",
+                    "isAnswer": true
+                },
+                {
+                    "id": 3,
+                    "questionId":  1,
+                    "name": "Lorum",
+                    "isAnswer": false
+                }
+            ],
+            "questionType": {
+                "id": 1,
+                "name": "Multiple Choice",
+                "isActive": true
+            }
+        }
+    ]
+}

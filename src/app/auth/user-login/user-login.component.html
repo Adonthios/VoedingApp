@@ -1,8 +1,9 @@
 {{checkUserInfo()}}
 <mat-card>
-	<mat-card-title>Voedingapp login</mat-card-title>
+	<mat-card-title *ngIf="isNewUser">Voedingapp registreer</mat-card-title>
+	<mat-card-title *ngIf="!isNewUser">Voedingapp login</mat-card-title>
 	<div *ngIf="!authService.isUserEmailLoggedIn">
-		<div style="width: 350px;" *ngIf="isNewUser">
+		<div style="width: 300px;" *ngIf="isNewUser">
 
 			<p *ngIf="errorMessage.length > 0" class="text-danger">
 				{{errorMessage}}</p>
@@ -11,23 +12,23 @@
 				{{error.message}}</p>
 
 			<form (ngSubmit)="onSignUp()">
-					<mat-form-field>
+					<mat-form-field class="wide">
 						<input matInput placeholder="Email" type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
 					</mat-form-field>
-					<mat-form-field>
+					<mat-form-field class="wide">
 						<input matInput placeholder="Naam" type="text" class="form-control" id="displayName" name="displayName" required [(ngModel)]="displayName">
 					</mat-form-field>
-					<mat-form-field>
+					<mat-form-field class="wide">
 						<input matInput type="password" class="form-control" id="password" placeholder="Wachtwoord" name="password" required [(ngModel)]="password">
 					</mat-form-field>
-
-					<button mat-button type="submit" class="btn btn-success">Registreer</button>
+					<button mat-raised-button type="submit" color="primary" class="btn btn-success">Registreer</button>
 			</form>
-
-			<h4 class="text-primary">Heb je al een account?<button mat-button (click)="changeForm()" class="btn btn-success">Log In</button></h4>
+		</div>
+		<div *ngIf="isNewUser" class="row">
+			<p class="text-primary">Heb je al een account?<button mat-button (click)="changeForm()" class="btn btn-success">Log In</button></p>
 		</div>
 
-		<div style="width: 350px;" *ngIf="!isNewUser">
+		<div style="width: 300px;" *ngIf="!isNewUser">
 
 			<p *ngIf="errorMessage.length > 0" class="text-danger">
 				{{errorMessage}}</p>
@@ -36,18 +37,18 @@
 				{{error.message}}</p>
 
 			<form (ngSubmit)="onLoginEmail()">
-				<mat-form-field>
+				<mat-form-field class="wide">
 					<input matInput placeholder="Email" type="email" class="form-control" id="email" name="email" required [(ngModel)]="email">
 				</mat-form-field>
-				<mat-form-field>
+				<mat-form-field class="wide">
 					<input matInput type="password" class="form-control" id="password" placeholder="Wachtwoord" name="password" required [(ngModel)]="password">
 				</mat-form-field>
-
-				<button mat-button type="submit" class="btn btn-success">Login</button>
+				<button mat-raised-button type="submit" color="primary" class="btn btn-success">Login</button>
 			</form>
+		</div>
 
-			<h4 class="text-primary" (click)="changeForm()">Heb je nog geen account? <button mat-button (click)="changeForm()" class="btn btn-success">Registreer</button></h4>
-
+		<div *ngIf="!isNewUser" class="row">
+			<p class="text-primary" (click)="changeForm()">Heb je nog geen account? <button mat-button (click)="changeForm()" class="btn btn-success">Registreer</button></p>
 		</div>
 	</div>
 </mat-card>

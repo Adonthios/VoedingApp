@@ -31,8 +31,6 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
