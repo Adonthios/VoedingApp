@@ -12,14 +12,21 @@ export class QuizService {
   quizResults: FirebaseListObservable<QuizResult[]> = null;
   filteredQuizResults: FirebaseListObservable<QuizResult[]> = null;
 
-  returnList: QuizResult[] = [];
+  returnQuizResultListOne: QuizResult[] = [];
+  returnQuizResultListTwo: QuizResult[] = [];
+  returnQuizResultListThree: QuizResult[] = [];
+  returnQuizResultListFour: QuizResult[] = [];
 
   constructor(private db: AngularFireDatabase, private http: Http) {
     this.quizResults = db.list('quizResults');
   }
 
   getQuizResultsByID(key: number): void {
-    this.returnList = [];
+    this.returnQuizResultListOne = [];
+    this.returnQuizResultListTwo = [];
+    this.returnQuizResultListThree = [];
+    this.returnQuizResultListFour = [];
+
     this.filteredQuizResults = this.db.list('quizResults', {
       query: {
         orderByChild: 'quizid',
@@ -36,13 +43,12 @@ export class QuizService {
           'quizid' : key,
           'correctFirstTime': qr.correctFirstTime
         };
-        this.returnList.push(temp);
+        if(key===1) { this.returnQuizResultListOne.push(temp); }
+        if(key===2) { this.returnQuizResultListTwo.push(temp); }
+        if(key===3) { this.returnQuizResultListThree.push(temp); }
+        if(key===4) { this.returnQuizResultListFour.push(temp); }
       });
     });
-  }
-
-  getReturnList() {
-    return this.returnList;
   }
 
    getQuizResult(key: string): FirebaseObjectObservable<QuizResult> {

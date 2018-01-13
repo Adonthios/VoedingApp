@@ -2,24 +2,42 @@
    <h1>Ranglijst</h1>
 
    <div class="container">
-     <p>Zie hieronder de ranglijsten van de quizzen</p>
+     <p>Zie hieronder de ranglijsten van de quizzen. Ga voor de top!</p>
      <mat-tab-group>
       <mat-tab label="Easy">
-        <ul>
-          <li *ngFor="let result of quizResultListOne">{{result.email}} - {{result.correctFirstTime}}</li>
+        <ul class="ranklist">
+          <li class="ranklist-item" *ngFor="let result of quizResultListOne">
+            <span>{{result.correctFirstTime}} - {{result.email}}</span>
+            <mat-progress-bar mode="determinate" value="{{result.correctFirstTime*10}}"></mat-progress-bar>
+          </li>
         </ul>
       </mat-tab>
 
       <mat-tab label="Medium">
-
+        <ul class="ranklist">
+          <li class="ranklist-item" *ngFor="let result of quizResultListTwo">
+            <span>{{result.correctFirstTime}} - {{result.email}}</span>
+            <mat-progress-bar mode="determinate" value="{{result.correctFirstTime*10}}"></mat-progress-bar>
+          </li>
+        </ul>
       </mat-tab>
 
       <mat-tab label="Hard">
-
+        <ul class="ranklist">
+          <li class="ranklist-item" *ngFor="let result of quizResultListThree">
+            <span>{{result.correctFirstTime}} - {{result.email}}</span>
+            <mat-progress-bar mode="determinate" value="{{result.correctFirstTime*10}}"></mat-progress-bar>
+          </li>
+        </ul>
       </mat-tab>
 
       <mat-tab label="Extra">
-
+        <ul class="ranklist">
+          <li class="ranklist-item" *ngFor="let result of quizResultListFour">
+            <span>{{result.correctFirstTime}} - {{result.email}}</span>
+            <mat-progress-bar mode="determinate" value="{{result.correctFirstTime*10}}"></mat-progress-bar>
+          </li>
+        </ul>
       </mat-tab>
     </mat-tab-group>
    </div>

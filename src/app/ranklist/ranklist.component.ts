@@ -22,18 +22,17 @@ export class RanklistComponent implements OnInit {
 
   ngOnInit() {
     this.quizService.getQuizResultsByID(1);
-    this.quizResultListOne = this.quizService.returnList;
+    this.quizService.getQuizResultsByID(2);
+    this.quizService.getQuizResultsByID(3);
+    this.quizService.getQuizResultsByID(4);
 
+    setTimeout(this.setData(), 600);
+  }
 
-
-    //
-    // this.quizService.getQuizResultsByID(2);
-    // this.quizResultListTwo = this.quizService.getReturnList();
-    //
-    // this.quizService.getQuizResultsByID(3);
-    // this.quizResultListThree = this.quizService.getReturnList();
-    //
-    // this.quizService.getQuizResultsByID(4);
-    // this.quizResultListFour = this.quizService.getReturnList();
+  setData() {
+    this.quizResultListOne = this.quizService.returnQuizResultListOne;
+    this.quizResultListTwo = this.quizService.returnQuizResultListTwo;
+    this.quizResultListThree = this.quizService.returnQuizResultListThree;
+    this.quizResultListFour = this.quizService.returnQuizResultListFour;
   }
 }

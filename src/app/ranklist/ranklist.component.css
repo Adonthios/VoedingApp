@@ -8,3 +8,11 @@
    overflow: auto;
    max-height: 500px;
  }
+
+.ranklist-item {
+  margin-bottom: 10px;
+}
+
+.ranklist {
+  list-style: none;
+}
