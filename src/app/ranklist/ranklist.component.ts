@@ -29,6 +29,7 @@ export class RanklistComponent implements OnInit {
     setTimeout(this.setData(), 600);
   }
 
+
   setData() {
     this.quizResultListOne = this.quizService.returnQuizResultListOne;
     this.quizResultListTwo = this.quizService.returnQuizResultListTwo;

@@ -32,7 +32,7 @@ export class QuizService {
         orderByChild: 'quizid',
         equalTo: key
       }
-    });
+    }).map(items => items.sort((a, b) => b.correctFirstTime - a.correctFirstTime)) as FirebaseListObservable<QuizResult[]>; ;
 
     this.filteredQuizResults.subscribe(quizResults => {
       quizResults.forEach(qr => {
