@@ -21,12 +21,10 @@
   <span *ngIf="state=='quizStarted'">{{quiz.name}}</span>
 
   <span class="spacer"></span>
-
-  <span *ngIf="state=='quizStarted'" (click)="stopQuiz();">
-    Stop quiz
-    <mat-icon mat-icon-button>clear</mat-icon>
-  </span>
-  <mat-icon *ngIf="state=='quizStarted'" (click)="stopQuiz();" mat-icon-button>clear</mat-icon>
+  <button mat-button *ngIf="state=='quizStarted'" (click)="stopQuiz();">
+  Stop quiz
+  <mat-icon mat-icon-button>clear</mat-icon>
+</button>
 </mat-toolbar>
 
 <ranklist *ngIf="show=='list'"></ranklist>
