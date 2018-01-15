@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 })
 
 export class QuizComponent implements OnInit {
+  userHasDoneQuiz: boolean = false;
   show: string = "quiz";
   quizes: any[];
   quiz: Quiz = new Quiz(null);
@@ -59,7 +60,8 @@ export class QuizComponent implements OnInit {
     count: 1
   };
 
-  constructor(private quizService: QuizService, public authService: AuthService, private router: Router) { }
+  constructor(private quizService: QuizService, public authService: AuthService, private router: Router) {
+  }
 
   ngOnInit() {
     if (!this.authService.isUserEmailLoggedIn) {
@@ -77,13 +79,20 @@ export class QuizComponent implements OnInit {
       this.pager.count = this.quiz.questions.length;
       this.quizProgress = ((this.pager.index + 1) / this.pager.count) * 100;
 
-      // update quiz result
-      this.toCreateQuizResult.quizid = this.quiz.id;
-      this.toCreateQuizResult.uid = this.authService.currentUserId;
-      this.toCreateQuizResult.email = this.authService.currentUserName;
-      this.key = this.quizService.createQuizResult(this.toCreateQuizResult);
-      console.log("key", this.key);
-      console.log("toCreateQuizResult", this.toCreateQuizResult);
+      // create quiz result if not done before
+      this.quizService.userHasCompletedQuiz(this.authService.currentUserId, this.quiz.id);
+
+      setTimeout(function(){
+        console.log("check of de user een quiz maakt");
+        this.userHasDoneQuiz = this.quizService.userHasDoneQuiz;
+        if (!this.userHasDoneQuiz) {
+          console.log("de user heeft nog geen quiz gemaakt!", this.userHasDoneQuiz);
+          this.toCreateQuizResult.quizid = this.quiz.id;
+          this.toCreateQuizResult.uid = this.authService.currentUserId;
+          this.toCreateQuizResult.email = this.authService.currentUserName;
+          this.key = this.quizService.createQuizResult(this.toCreateQuizResult)
+        }
+      }.bind(this), 1000);
     });
     this.correctFirstTime = this.timesGuessed = 0;
     this.mode = 'quiz';
@@ -110,8 +119,10 @@ export class QuizComponent implements OnInit {
       this.correctFirstTime++;
     }
     // update quiz result data
-    var quizResultUpdate = { correctFirstTime: this.correctFirstTime}
-    this.quizService.updateQuizResult(this.key, quizResultUpdate);
+    if (!this.userHasDoneQuiz) {
+      var quizResultUpdate = { correctFirstTime: this.correctFirstTime}
+      this.quizService.updateQuizResult(this.key, quizResultUpdate);
+    }
   }
 
   goTo(index: number) {

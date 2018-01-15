@@ -11,6 +11,8 @@ export class QuizService {
   quizResult: FirebaseObjectObservable<QuizResult> = null;
   quizResults: FirebaseListObservable<QuizResult[]> = null;
   filteredQuizResults: FirebaseListObservable<QuizResult[]> = null;
+  userHasDoneQuizResults: FirebaseListObservable<QuizResult[]> = null;
+  userHasDoneQuiz: boolean = false;
 
   returnQuizResultListOne: QuizResult[] = [];
   returnQuizResultListTwo: QuizResult[] = [];
@@ -75,6 +77,25 @@ export class QuizService {
        query: query
      });
      return this.quizResults;
+   }
+
+   userHasCompletedQuiz(uid: string, quizid: number) : void {
+     this.userHasDoneQuiz = false;
+     this.userHasDoneQuizResults = this.db.list('quizResults', {
+       query: {
+         orderByChild: 'uid',
+         equalTo: uid
+       }
+     });
+     this.userHasDoneQuizResults.subscribe(quizResults => {
+       quizResults.forEach(qr => {
+         console.log(qr.quizid, quizid)
+         if(qr.quizid == quizid) {
+           console.log("quiz gelijk aan elkaar");
+           this.userHasDoneQuiz = true;
+         }
+       });
+     });
    }
 
    deleteAll(): void {
