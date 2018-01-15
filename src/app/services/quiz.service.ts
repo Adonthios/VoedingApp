@@ -37,6 +37,19 @@ export class QuizService {
     }).map(items => items.sort((a, b) => b.correctFirstTime - a.correctFirstTime)) as FirebaseListObservable<QuizResult[]>; ;
 
     this.filteredQuizResults.subscribe(quizResults => {
+      if (this.returnQuizResultListOne.length > 0) {
+        this.returnQuizResultListOne = [];
+      }
+      if (this.returnQuizResultListTwo.length > 0) {
+        this.returnQuizResultListTwo = [];
+      }
+      if (this.returnQuizResultListThree.length > 0) {
+        this.returnQuizResultListThree = [];
+      }
+      if (this.returnQuizResultListFour.length > 0) {
+        this.returnQuizResultListFour = [];
+      }
+
       quizResults.forEach(qr => {
         var temp: QuizResult = {
           '$key' : "",
