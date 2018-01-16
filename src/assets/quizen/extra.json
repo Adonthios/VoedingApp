@@ -237,13 +237,13 @@
                 {
                     "id": 1,
                     "questionId":  9,
-                    "name": "De waardes van je bloedsuiker gaan geleidelijk omhoog.",
+                    "name": "De waarden van je bloedsuiker gaan geleidelijk omhoog.",
                     "isAnswer": false
                 },
                 {
                     "id": 2,
                     "questionId":  9,
-                    "name": "De waardes van je bloedsuiker gaan snel omhoog.",
+                    "name": "De waarden van je bloedsuiker gaan snel omhoog.",
                     "isAnswer": true,
                     "description":"Witbrood heeft een hoge glycemische index. Dit betekent dat je bloedsuikergehalte snel omhoog gaat. Witbrood valt onder de snelle koolhydraten en wordt snel opgenomen door jouw lichaam. Een te hoge bloedsuikerspiegel is slecht voor je gezondheid. Zo kan het schade opleveren aan je aders, verhoogt het de kans op chronische ziekte en kan je er overgewicht van krijgen. We raden daarom volkorenbrood aan in plaats van wit brood.",
                     "url": "http://www.voedingscentrum.nl/encyclopedie/glycemische-index.aspx"
@@ -251,13 +251,13 @@
                 {
                     "id": 3,
                     "questionId":  9,
-                    "name": "De waardes van je bloedsuiker gaan geleidelijk omlaag.",
+                    "name": "De waarden van je bloedsuiker gaan geleidelijk omlaag.",
                     "isAnswer": false
                 },
                 {
                     "id": 4,
                     "questionId":  9,
-                    "name": "De waardes van je bloedsuiker gaan snel omlaag.",
+                    "name": "De waarden van je bloedsuiker gaan snel omlaag.",
                     "isAnswer": false
                 }
             ],
